@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-card-perros',
   templateUrl: './card-perros.component.html',
   styleUrls: ['./card-perros.component.scss'],
+  standalone: false
 })
 export class CardPerrosComponent  implements OnInit {
 
