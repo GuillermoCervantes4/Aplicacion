@@ -5,12 +5,13 @@ import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { CardPerrosComponent } from 'src/app/components/card-perros/card-perros.component';
 import { CardComponent } from 'src/app/components/card/card.component';
+import { HeaderComponent } from 'src/app/components/header/header.component';
 
 
 
 @NgModule({
-  exports: [ToolbarComponent, CardPerrosComponent, CardComponent],
-  declarations: [ToolbarComponent, CardPerrosComponent, CardComponent],
+  exports: [ToolbarComponent, CardPerrosComponent, CardComponent, HeaderComponent],
+  declarations: [ToolbarComponent, CardPerrosComponent, CardComponent, HeaderComponent],
   imports: [
     CommonModule,
     RouterModule,

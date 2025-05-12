@@ -1,29 +1,25 @@
-<ion-footer>
-  <ion-toolbar >
+<ion-footer color="#3880ff" class="ion-no-border">
+  <ion-toolbar background-color="primary"> >
     <ion-tabs>
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="search">
-          <ion-icon name="radio"></ion-icon>
+          <ion-icon name="search"></ion-icon>
           Perdidos
-        </ion-tab-button>
-        <ion-tab-button [routerLink]="['/login']">
-          <ion-icon name="radio"></ion-icon>
-          Login
-        </ion-tab-button>
-        <ion-tab-button tab="library">
-          <ion-icon name="library"></ion-icon>
+        </ion-tab-button> 
+        <ion-tab-button tab="shelters" [routerLink]="['/alberguess']">
+          <ion-icon name="paw"></ion-icon>
           Albergues
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/home']">
-          <ion-icon name="search"></ion-icon>
+          <ion-icon name="home"></ion-icon>
           Inicio
         </ion-tab-button>
-        <ion-tab-button tab="search">
-          <ion-icon name="search"></ion-icon>
+        <ion-tab-button tab="store">
+          <ion-icon name="cart"></ion-icon>
           Tienda
         </ion-tab-button>
-        <ion-tab-button tab="search">
-          <ion-icon name="search"></ion-icon>
+        <ion-tab-button tab="profile">
+          <ion-icon name="person-circle"></ion-icon>
           Perfil
         </ion-tab-button>
       </ion-tab-bar>

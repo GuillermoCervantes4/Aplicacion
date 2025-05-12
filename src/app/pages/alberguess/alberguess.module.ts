@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RegisterPageRoutingModule } from './register-routing.module';
+import { AlberguessPageRoutingModule } from './alberguess-routing.module';
 
-import { RegisterPage } from './register.page';
+import { AlberguessPage } from './alberguess.page';
 import { SharedModule } from 'src/app/modules/shared/shared.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { SharedModule } from 'src/app/modules/shared/shared.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    RegisterPageRoutingModule,
+    AlberguessPageRoutingModule,
     SharedModule
   ],
-  declarations: [RegisterPage]
+  declarations: [AlberguessPage]
 })
-export class RegisterPageModule {}
+export class AlberguessPageModule {}

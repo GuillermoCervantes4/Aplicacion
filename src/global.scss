@@ -34,4 +34,12 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
+// @import "@ionic/angular/css/palettes/dark.system.css";
+
+@font-face {
+    font-family:"Fredoka One"; 
+    src: url("./assets/font/fredoka-one-latin-400-normal.ttf") format("truetype");
+
+    // font-family: "Poppins";
+    // src: url("./assets/font/poppins-v15-latin-regular.ttf") format("truetype");
+}

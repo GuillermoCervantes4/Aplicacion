@@ -18,7 +18,27 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+  },  {
+    path: 'filtro',
+    loadChildren: () => import('./pages/filtro/filtro.module').then( m => m.FiltroPageModule)
+  },
+  {
+    path: 'adoptar',
+    loadChildren: () => import('./pages/adoptar/adoptar.module').then( m => m.AdoptarPageModule)
+  },
+  {
+    path: 'perrito',
+    loadChildren: () => import('./pages/perrito/perrito.module').then( m => m.PerritoPageModule)
+  },
+  {
+    path: 'albergue',
+    loadChildren: () => import('./pages/albergue/albergue.module').then( m => m.AlberguePageModule)
+  },
+  {
+    path: 'alberguess',
+    loadChildren: () => import('./pages/alberguess/alberguess.module').then( m => m.AlberguessPageModule)
   }
+
 ];
 
 @NgModule({
