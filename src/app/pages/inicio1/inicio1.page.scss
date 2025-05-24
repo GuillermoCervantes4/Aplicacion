@@ -1,0 +1,106 @@
+.contenido-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --padding-top: 24px;
+}
+
+.contenedor-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.bienvenida {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+.bienvenida span {
+    font-weight: normal;
+    font-size: 16px;
+    color: #333;
+}
+
+.btn-principal {
+    color: white;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.texto-registro {
+    font-size: 14px;
+    color: #444;
+}
+
+.btn-google {
+    background-color: black !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+}
+
+.icon-google {
+
+    width: 30px;
+    height: 30px;
+}
+
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4285f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.splash.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.logo-splash {
+    width: 350px;
+    height: auto;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

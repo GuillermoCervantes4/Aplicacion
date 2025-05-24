@@ -1,0 +1,14 @@
+node_modules/
+.vscode/
+.angular/
+node_modules/
+www/
+.env
+android/
+ios/
+.vscode/
+.idea/
+dist/
+.DS_Store
+Thumbs.db
+.angular/

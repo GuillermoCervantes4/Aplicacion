@@ -1,0 +1,30 @@
+.boton{
+    margin-left: 25px;
+    width: 42px;
+    height: 42px;
+    background-color: #6cd9b0;
+    border-radius: 10px;
+}
+.titulo {
+  font-weight: bold;
+}
+.icono{
+    color: var(--ion-color-light);
+}
+
+.btn-flotante {
+    background-color: #6cd9b0;
+    color: white;
+    text-transform: capitalize;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 120px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    
+}
+
+.btn-flotante:hover {
+  background-color: #3880ffcc; 
+}

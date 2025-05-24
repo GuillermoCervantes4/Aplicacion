@@ -1,0 +1,38 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>perdidos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">perdidos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+
+<app-header>Perdidos</app-header>
+
+<ion-searchbar></ion-searchbar>
+
+
+<ion-button class="filtro">Filtro</ion-button>
+<!-- <ion-button [routherLink="/reportar"]>Reportar</ion-button> -->
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+        <ion-item *ngFor="let perdido of perdidos">
+          <app-card-perros  [perdido]="perdido">
+          </app-card-perros>
+        </ion-item>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<app-toolbar></app-toolbar>
+
+
+
+

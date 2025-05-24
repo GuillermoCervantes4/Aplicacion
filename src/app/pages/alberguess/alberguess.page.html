@@ -1,0 +1,42 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>alberguess</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<app-header>
+  <ion-title>alberguess</ion-title>
+</app-header>
+
+<ion-content>
+  <ion-icon name="search"></ion-icon>
+  <ion-input placeholder="Search" ></ion-input>
+</ion-content>
+
+<ion-searchbar></ion-searchbar>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let albergue of albergues">
+        <ion-item>
+          <app-card>
+            <ion-card-title>{{albergue?.name}}</ion-card-title>
+            <ion-card-subtitle>{{albergue?.location}}</ion-card-subtitle>
+          </app-card>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">alberguess</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+<app-toolbar></app-toolbar>

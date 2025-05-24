@@ -1,0 +1,26 @@
+.card-perros{
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 168px;
+    height: 245px;
+    border-radius: 10px;
+}
+.card-perros .titulo{
+    font-size: 18px;
+    color: #000;
+    align-items: center;
+    margin: -20px 0 0 -15px;
+}
+
+.card-perros .detalle{
+    font-size: 14px;
+    color: #636363;
+    margin: 10px 0 0 -15px;
+}
+
+.card-perros img{
+    height: 140px;
+    width: 145px;
+    text-align: left;
+    border-radius: 10px;
+}

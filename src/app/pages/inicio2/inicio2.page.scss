@@ -1,0 +1,96 @@
+.google-login-container {
+    max-width: 360px;
+    margin: 40px auto;
+    padding: 24px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.google-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.subtexto {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+.cuenta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.icono-circulo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.icono-circulo.rojo {
+    background-color: #d74c3f;
+}
+
+.icono-circulo.gris {
+    background-color: #999;
+}
+
+.icono-circulo.azul {
+    background-color: #4285f4;
+}
+
+.datos-cuenta {
+    text-align: left;
+    font-size: 14px;
+}
+
+.datos-cuenta span {
+    color: #555;
+    font-size: 12px;
+}
+
+.cuenta.añadir {
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 8px;
+    border-bottom: none;
+}
+
+.btn-cancelar {
+    margin-top: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.texto-legal {
+    font-size: 11px;
+    color: #666;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+.texto-legal a {
+    color: #1a73e8;
+    text-decoration: none;
+}

@@ -1,0 +1,67 @@
+
+.boton {
+    margin-left: 25px;
+    width: 42px;
+    height: 42px;
+    background-color: #6cd9b0;
+    border-radius: 10px;
+}
+
+.titulo {
+    font-weight: bold;
+}
+.contenido-qr {
+    --padding-top: 32px;
+    --padding-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-qr {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: auto;
+    max-width: 320px;
+    padding: 24px;
+}
+
+.qr-img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.btn-descarga {
+    background-color: #6cd9b0;
+    color: white;
+    width: 160px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.texto-instruccion {
+    font-size: 14px;
+    color: #444;
+    padding: 0 12px;
+    line-height: 1.5;
+}
+.btn-flotante {
+    background-color: #6cd9b0;
+    color: white;
+    text-transform: capitalize;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 120px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    
+}
+
+.btn-flotante:hover {
+  background-color: #3880ffcc;
+}

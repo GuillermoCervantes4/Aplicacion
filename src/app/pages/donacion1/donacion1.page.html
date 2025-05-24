@@ -1,0 +1,52 @@
+<ion-header class="cabezera" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="boton" defaultHref="/home" style="color: white;">
+        <ion-icon class="icono" name="arrow-white"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo">Donación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p class="subtitulo">Elige un método de pago</p>
+
+  <div class="opciones">
+    <ion-item lines="none">
+      <ion-checkbox
+        labelPlacement="end"
+        [checked]="opcionSeleccionada === 'unica'"
+        (ionChange)="seleccionarOpcion('unica')"
+      >
+        Donación única
+      </ion-checkbox>
+    </ion-item>
+
+    <div class="linea-divisoria"></div>
+
+    <ion-item lines="none">
+      <ion-checkbox
+        labelPlacement="end"
+        [checked]="opcionSeleccionada === 'mensual'"
+        (ionChange)="seleccionarOpcion('mensual')"
+      >
+        Donación mensual
+      </ion-checkbox>
+    </ion-item>
+  </div>
+
+  <ion-button
+    class="btn-flotante"
+    expand="block"
+    color="terciary"
+    [disabled]="!opcionSeleccionada"
+    (click)="irASiguiente()"
+  >
+    Siguiente
+  </ion-button>
+</ion-content>
+
+<ion-footer>
+  <app-toolbar></app-toolbar>
+</ion-footer>

@@ -1,0 +1,44 @@
+.image-container {
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 0 0 24px 24px;
+    overflow: hidden;
+    margin-top: 20px;
+  
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 32px 32px 0 0;
+      object-fit: cover;
+    }
+  }
+  
+  .back-button {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 10;
+    --background: #e0f5ec;
+    --color: #2dd36f;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-content {
+    margin-top: 24px;
+    padding: 0 20px;
+  }
+  
+  .secondary-text {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .boton {
+    width: 42px;
+    height: 42px;
+    background-color: #6cd9b0;
+    border-radius: 10px;
+  
+  }

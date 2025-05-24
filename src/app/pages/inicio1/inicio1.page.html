@@ -1,0 +1,28 @@
+
+<div class="splash" [ngClass]="{ 'fade-out': !mostrarSplash }">
+  <img src="assets/imgs/soloLogo.png" alt="Logo Splash" class="logo-splash" />
+</div>
+
+<ion-content class="contenido-inicio" *ngIf="!mostrarSplash" fullscreen>
+
+
+
+
+<div class="contenedor-inicio" *ngIf="!mostrarSplash">
+  <img src="assets/imgs/logo.png" alt="Logo PetLink" class="logo" />
+
+  <h2 class="bienvenida">Bienvenido<br></h2>
+
+  <ion-button class="btn-principal" expand="block" routerLink="/login">Iniciar sesión</ion-button>
+
+  <p class="texto-registro">¿No tienes cuenta? Crea una.</p>
+
+  <ion-button class="btn-principal" expand="block" fill="outline" style="color: #3880FF" routerLink="/register">Registrarse</ion-button>
+
+  <ion-button class="btn-google" expand="block" routerLink="/inicio2">
+    <img src="assets/imgs/google-icon.png" alt="Google Icon" class="icon-google" />
+    <span>Iniciar sesión con cuenta</span>
+  </ion-button>
+</div>
+
+</ion-content>

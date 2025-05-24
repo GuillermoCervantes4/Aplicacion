@@ -1,0 +1,37 @@
+<ion-header class="cabezera" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="boton" routerLink="/apadrinar1" style="color: white;">
+        <ion-icon class="icono" name="arrow-white"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo">Apadrinamiento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <p style="padding: 16px; font-size: 20px; line-height: 1.6;">
+
+    Elige un metodo de pago
+  </p>
+  <ion-content >
+    <ion-checkbox labelPlacement="end" style="padding-left: 24px; font-size: 10pt;">Tarjeta de credito/debito</ion-checkbox>
+  </ion-content>
+</ion-content>
+
+
+<ion-button 
+    class="btn-flotante" 
+    expand="block"
+    color="terciary"
+    routerLink="/apadrinar3"
+  >
+    Siguiente
+  </ion-button>
+
+<ion-footer>
+
+<app-toolbar></app-toolbar>
+
+</ion-footer>

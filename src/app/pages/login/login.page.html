@@ -1,0 +1,40 @@
+<!--
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+
+
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button class="boton" defaultHref="/home" style="color: white;">
+              <ion-icon class="icono" name="arrow-white"></ion-icon>
+          </ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1 style="font-weight: bold;">Iniciar Sesión</h1>
+        <form [formGroup]="form" (ngSubmit)="login()">
+          <ion-input formControlName="email" labelPlacement="floating"  label="Nombre de Usuario" type="email" fill="outline" mode="md"></ion-input>
+          <ion-text *ngIf="form.get('email')?.touched && form.get('email')?.valid === false">
+            <p *ngIf="form.get('email')?.errors?.['required']"style="padding-bottom: 5px;">Nombre de Usuario es requerido</p>
+            <p *ngIf="form.get('email')?.valid===false"style="padding-bottom: 10px;">Nombre de Usuario invalido</p>
+          </ion-text>
+          <ion-input formControlName="password" label="Contraseña" type="password" fill="outline"
+            mode="md"></ion-input>
+          <ion-text *ngIf="form.get('password')?.touched && form.get('password')?.valid === false">
+            <p *ngIf="form.get('password')?.errors?.['required']"style="padding-bottom: 10px;">El Password es requerido</p>
+          </ion-text>
+          <ion-button type="submit">Ingresar</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

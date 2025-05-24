@@ -1,0 +1,26 @@
+<app-header>Adoptar</app-header>
+
+<!-- <ion-searchbar></ion-searchbar> -->
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+        <ion-item *ngFor="let perro of perros" [href]="'/perrito/'+perro.id">
+          <app-card-perros  [perro]="perro">
+          </app-card-perros>
+        </ion-item>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<!-- <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">adoptar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+
+<app-toolbar></app-toolbar>
+
+

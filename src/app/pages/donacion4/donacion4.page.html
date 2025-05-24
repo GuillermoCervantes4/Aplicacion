@@ -1,0 +1,38 @@
+<ion-header class="cabezera" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="boton" defaultHref="/home" style="color: white;">
+        <ion-icon class="icono" name="arrow-white"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo">Donación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="contenido-qr" fullscreen>
+  <div class="contenedor-qr">
+    <img src="assets/imgs/qr.png" alt="QR para donación" class="qr-img" />
+
+    <ion-button class="btn-descarga" expand="block">
+      Descargar QR
+    </ion-button>
+
+    <p class="texto-instruccion">
+      Escanea el código QR y realiza la donación que desees a través de tu banca electrónica.
+    </p>
+  </div>
+
+  <ion-button 
+    class="btn-flotante" 
+    expand="block"
+    color="terciary"
+    routerLink="/donacion5"
+  >
+    Siguiente
+  </ion-button>
+</ion-content>
+
+<ion-footer>
+  <app-toolbar></app-toolbar>
+</ion-footer>
+
