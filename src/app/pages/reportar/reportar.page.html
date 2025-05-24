@@ -1,23 +1,24 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>reportar</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
+<app-header>
+  <ion-title class="titulo">Reportar mascota</ion-title>
+</app-header>
 
+<ion-content>
+  <ion-title class="titulo">Agregar datos</ion-title>
+  <ion-input class="barra" label="Nombre de la mascota" label-placement="floating" fill="outline" placeholder=""></ion-input>
+  <ion-input class="barra" label="Raza o descripcion" label-placement="floating" fill="outline" placeholder=""></ion-input>
+  <ion-input class="barra" label="Fecha y hora de desaparicion" label-placement="floating" fill="outline" placeholder=""></ion-input>
+  <ion-input class="barra" label="Contacto del dueno" label-placement="floating" fill="outline" placeholder=""></ion-input>
+  <ion-input class="barra" label="Recompensa" label-placement="floating" fill="outline" placeholder=""></ion-input>
+  <ion-input class="barra" label="Foto" label-placement="floating" fill="outline" placeholder="Subir foto">
+    <ion-icon color="primary" class="icono" slot="end" name="arrow-up-circle-sharp"></ion-icon>
+  </ion-input>
 
-<ion-searchbar placeholder="Nombre de la mascota"></ion-searchbar>
-<ion-searchbar placeholder="Raza o descripcion"></ion-searchbar>
-<ion-searchbar placeholder="Fecha y hora de desaparicion"></ion-searchbar>
-<ion-searchbar placeholder="Contacto del dueno"></ion-searchbar>
-<ion-searchbar placeholder="Recompensa"></ion-searchbar>
-<ion-searchbar placeholder="Subir Foto"><ion-icon slot="end" name="arrow-up-circle-sharp"></ion-icon></ion-searchbar>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">reportar</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <button slot="end">Siguiente</button>
 </ion-content>
 
 <app-toolbar></app-toolbar>

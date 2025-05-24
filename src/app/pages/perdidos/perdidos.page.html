@@ -14,19 +14,20 @@
 
 <app-header>Perdidos</app-header>
 
-<ion-searchbar></ion-searchbar>
-
-
-<ion-button class="filtro">Filtro</ion-button>
 <!-- <ion-button [routherLink="/reportar"]>Reportar</ion-button> -->
 
 <ion-content [fullscreen]="true">
+  <ion-searchbar></ion-searchbar>
+  <ion-button class="filtro" color="color-medium-tin">Filtro</ion-button>
+  <ion-button class="boton" color="color-turquesa" [routerLink]="['/reportar']">Reportar</ion-button>
   <ion-grid>
     <ion-row>
-        <ion-item *ngFor="let perdido of perdidos">
+      <ion-col size="6" *ngFor="let perdido of perdidos">
+        <ion-item>
           <app-card-perros  [perdido]="perdido">
           </app-card-perros>
         </ion-item>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

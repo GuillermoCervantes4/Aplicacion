@@ -18,11 +18,18 @@ export class PerritoPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log('perritoID', this.route.snapshot.paramMap.get('perritoId'));
+    this.id = this.route.snapshot.paramMap.get('perritoId');
     this.db.getDocumentById('Perros', this.id)
       .subscribe((res: any) => {
         console.log('Perro recuperado', res);
         this.data = res;
       })
   }
+    // this.db.getDocumentById('Perros', this.id)
+    //   .subscribe((res: any) => {
+    //     console.log('Perro recuperado', res);
+    //     this.data = res;
+    //   })
+  }
 
-}

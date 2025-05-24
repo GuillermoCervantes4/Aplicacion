@@ -7,21 +7,17 @@
   <ion-title>alberguess</ion-title>
 </app-header>
 
-<ion-content>
-  <ion-icon name="search"></ion-icon>
-  <ion-input placeholder="Search" ></ion-input>
-</ion-content>
-
-<ion-searchbar></ion-searchbar>
-
 <ion-content [fullscreen]="true">
+  <ion-searchbar></ion-searchbar>
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let albergue of albergues">
-        <ion-item>
-          <app-card>
-            <ion-card-title>{{albergue?.name}}</ion-card-title>
-            <ion-card-subtitle>{{albergue?.location}}</ion-card-subtitle>
+      <ion-col size="7" *ngFor="let albergue of albergues">
+        <ion-item [href]="'/albergue/'+albergue.id">
+          <app-card [albergue]="albergue">
+            <!-- <ion-label>
+              <h2>{{albergue.nombre}}</h2>
+              <p>{{albergue.descripcion}}</p>
+            </ion-label> -->
           </app-card>
         </ion-item>
       </ion-col>
@@ -30,13 +26,5 @@
 </ion-content>
 
 
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">alberguess</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
 
 <app-toolbar></app-toolbar>

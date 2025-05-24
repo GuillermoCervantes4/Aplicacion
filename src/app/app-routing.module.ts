@@ -18,7 +18,8 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
-  },  {
+  },
+  {
     path: 'filtro',
     loadChildren: () => import('./pages/filtro/filtro.module').then( m => m.FiltroPageModule)
   },
@@ -27,11 +28,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/adoptar/adoptar.module').then( m => m.AdoptarPageModule)
   },
   {
-    path: 'perrito',
+    path: 'perrito/:perritoId',
     loadChildren: () => import('./pages/perrito/perrito.module').then( m => m.PerritoPageModule)
   },
   {
-    path: 'albergue',
+    path: 'albergue/:albergueId',
     loadChildren: () => import('./pages/albergue/albergue.module').then( m => m.AlberguePageModule)
   },
   {

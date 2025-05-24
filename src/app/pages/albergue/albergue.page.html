@@ -1,16 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>albergue</ion-title>
+    <ion-title>{{data?.nombre}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">albergue</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<app-header>
+  <ion-title>{{data?.nombre}}</ion-title>
+</app-header>
+
+<ion-content>
+  <ion-title>
+    {{data?.description}}
+  </ion-title>
+  <ion-title>
+    {{data?.Location}}
+  </ion-title>
+  <ion-title>
+    {{data?.schedule}}
+  </ion-title>
+  <ion-title>
+    {{data?.ownerName}}
+  </ion-title>
+  <ion-title>
+    {{data?.description}}
+  </ion-title>
+  <ion-title>
+    {{data?.description}}
+  </ion-title>
 </ion-content>
+
+<app-toolbar></app-toolbar>
 
 <!-- <!DOCTYPE html>
 <html lang="en">

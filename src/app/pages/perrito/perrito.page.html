@@ -4,9 +4,25 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="data?.imagen" />
+    <ion-card-header>
+      <ion-card-title>{{data?.nombre || data?.name}}</ion-card-title>
+      <ion-card-subtitle>{{data?.raza}}</ion-card-subtitle>
+      <ion-text>
+        <p>Edad: {{data?.edad}}</p>
+        <p>Sexo: {{data?.sexo}}</p>
+        <p>Teléfono: {{data?.telefono}}</p>
+        <p>Email: {{data?.email}}</p>
+        <p>Descripción: {{data?.descripcion}}</p>
+      </ion-text>
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+  <button>Adoptar</button>
+  <button>Apadrinar</button>
 </ion-content>
+<app-toolbar></app-toolbar>

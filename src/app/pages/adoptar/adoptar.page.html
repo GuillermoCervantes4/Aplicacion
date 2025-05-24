@@ -1,14 +1,15 @@
 <app-header>Adoptar</app-header>
 
-<!-- <ion-searchbar></ion-searchbar> -->
-
 <ion-content [fullscreen]="true">
+  <ion-searchbar></ion-searchbar>
   <ion-grid>
     <ion-row>
-        <ion-item *ngFor="let perro of perros" [href]="'/perrito/'+perro.id">
+      <ion-col size="6" *ngFor="let perro of perros" >
+        <ion-item [href]="'/perrito/'+perro.id">
           <app-card-perros  [perro]="perro">
           </app-card-perros>
         </ion-item>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
