@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>perdido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="data?.imagen" />
+    <ion-card-header>
+      <ion-card-title>{{data?.nombre || data?.name}}</ion-card-title>
+      <ion-text>
+        Se busca!
+      </ion-text>
+       <ion-text>
+        <p><strong>Zona</strong>: {{data?.edad}}</p>
+      </ion-text>
+       <ion-text>
+        <p><strong>Fecha de desaparicion</strong>: {{data?.zonaPerdida}}</p>
+      </ion-text>
+      <ion-text>
+        <p><strong>Raza</strong>: {{data?.raza || data?.descripcion}}</p>
+      </ion-text>
+      <ion-text>
+        <p><strong>Color</strong>: {{data?.color}}</p>
+      </ion-text>
+      <ion-text>
+        <p><strong>Tamano</strong>: {{data?.tamano}}</p>
+      </ion-text>
+      <ion-text>
+        <p><strong>Contacto</strong>: {{data?.contactoDueno}}</p>
+      </ion-text>
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<app-toolbar></app-toolbar>
+

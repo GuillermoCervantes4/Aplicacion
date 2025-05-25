@@ -23,7 +23,7 @@
   <ion-grid>
     <ion-row>
       <ion-col size="6" *ngFor="let perdido of perdidos">
-        <ion-item>
+        <ion-item [href]="'/perdido/'+perdido.id">
           <app-card-perros  [perdido]="perdido">
           </app-card-perros>
         </ion-item>

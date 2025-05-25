@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'inicio1',
     pathMatch: 'full'
   },
   {
@@ -98,10 +98,16 @@ const routes: Routes = [
   {
     path: 'apadrinar4',
     loadChildren: () => import('./pages/apadrinar4/apadrinar4.module').then( m => m.Apadrinar4PageModule)
-  },  {
+  },
+  {
     path: 'notificaciones',
     loadChildren: () => import('./pages/notificaciones/notificaciones.module').then( m => m.NotificacionesPageModule)
+  },
+  {
+    path: 'perdido/:perdidoId',
+    loadChildren: () => import('./pages/perdido/perdido.module').then( m => m.PerdidoPageModule)
   }
+
 
 
 ];

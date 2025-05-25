@@ -17,6 +17,7 @@ export class PerdidosPage implements OnInit {
    }
 
   ngOnInit() {
+   
   }
 
   fetchPerdidos() {
@@ -26,14 +27,14 @@ export class PerdidosPage implements OnInit {
       this.perdidos = res;
     })
   }
-//   let perdidos = [
-//     {
+//  let perdidos = [
+//   {
 //     id: 1,
 //     nombre: "Tango",
 //     personalidad: "Juguetón",
 //     raza: "Labrador",
 //     sexo: "Macho",
-//     tamaño: "Grande",
+//     tamano: "Grande",
 //     salud: "Vacunado",
 //     descripcion: "Le encanta correr tras pelotas.",
 //     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1",
@@ -49,7 +50,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Tranquila",
 //     raza: "Golden Retriever",
 //     sexo: "Hembra",
-//     tamaño: "Grande",
+//     tamano: "Grande",
 //     salud: "Vacunada y esterilizada",
 //     descripcion: "Le encanta descansar y recibir cariño.",
 //     imagen: "https://images.unsplash.com/photo-1601758123927-196a80bf0f16",
@@ -65,7 +66,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Tímido",
 //     raza: "Beagle",
 //     sexo: "Macho",
-//     tamaño: "Mediano",
+//     tamano: "Mediano",
 //     salud: "Vacunado",
 //     descripcion: "Le cuesta acercarse a desconocidos.",
 //     imagen: "https://images.unsplash.com/photo-1603133872878-684f208fb88d",
@@ -81,7 +82,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Alegre",
 //     raza: "Mestiza",
 //     sexo: "Hembra",
-//     tamaño: "Pequeño",
+//     tamano: "Pequeño",
 //     salud: "Vacunada",
 //     descripcion: "Sociable con personas y perros.",
 //     imagen: "https://images.unsplash.com/photo-1598133894009-32ff43edbe6a",
@@ -97,7 +98,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Protector",
 //     raza: "Rottweiler",
 //     sexo: "Macho",
-//     tamaño: "Grande",
+//     tamano: "Grande",
 //     salud: "Vacunado",
 //     descripcion: "Siempre atento a su entorno.",
 //     imagen: "https://images.unsplash.com/photo-1583512603873-9227c5e91e94",
@@ -113,7 +114,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Cariñosa",
 //     raza: "Cocker Spaniel",
 //     sexo: "Hembra",
-//     tamaño: "Mediano",
+//     tamano: "Mediano",
 //     salud: "Vacunada",
 //     descripcion: "Le encanta que la acaricien.",
 //     imagen: "https://images.unsplash.com/photo-1619983081535-7c514b55ec49",
@@ -129,7 +130,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Curioso",
 //     raza: "Pug",
 //     sexo: "Macho",
-//     tamaño: "Pequeño",
+//     tamano: "Pequeño",
 //     salud: "Vacunado",
 //     descripcion: "Explora todo con la nariz.",
 //     imagen: "https://images.unsplash.com/photo-1573148195901-cfc852b4b4d3",
@@ -145,7 +146,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Dulce",
 //     raza: "Shih Tzu",
 //     sexo: "Hembra",
-//     tamaño: "Pequeño",
+//     tamano: "Pequeño",
 //     salud: "Vacunada",
 //     descripcion: "Ideal para compañía.",
 //     imagen: "https://images.unsplash.com/photo-1568572933382-74d440642117",
@@ -161,7 +162,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Leal",
 //     raza: "Pastor Alemán",
 //     sexo: "Macho",
-//     tamaño: "Grande",
+//     tamano: "Grande",
 //     salud: "Vacunado",
 //     descripcion: "Siempre dispuesto a ayudar.",
 //     imagen: "https://images.unsplash.com/photo-1570215171323-4ec328f3f4f1",
@@ -177,7 +178,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Juguetona",
 //     raza: "Border Collie",
 //     sexo: "Hembra",
-//     tamaño: "Mediano",
+//     tamano: "Mediano",
 //     salud: "Vacunada",
 //     descripcion: "Corre todo el día.",
 //     imagen: "https://images.unsplash.com/photo-1574158622682-e40e69881006",
@@ -193,7 +194,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Travieso",
 //     raza: "Dálmata",
 //     sexo: "Macho",
-//     tamaño: "Grande",
+//     tamano: "Grande",
 //     salud: "Vacunado",
 //     descripcion: "Le gusta explorar.",
 //     imagen: "https://images.unsplash.com/photo-1558788353-f76d92427f16",
@@ -209,7 +210,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Tierna",
 //     raza: "Pomerania",
 //     sexo: "Hembra",
-//     tamaño: "Pequeño",
+//     tamano: "Pequeño",
 //     salud: "Vacunada",
 //     descripcion: "Siempre está feliz.",
 //     imagen: "https://images.unsplash.com/photo-1601758003122-58e7f5f10c79",
@@ -225,7 +226,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Fuerte",
 //     raza: "Pitbull",
 //     sexo: "Macho",
-//     tamaño: "Grande",
+//     tamano: "Grande",
 //     salud: "Vacunado",
 //     descripcion: "Muy valiente y fiel.",
 //     imagen: "https://images.unsplash.com/photo-1596495577886-d920f1fb7238",
@@ -241,7 +242,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Energética",
 //     raza: "Jack Russell",
 //     sexo: "Hembra",
-//     tamaño: "Pequeño",
+//     tamano: "Pequeño",
 //     salud: "Vacunada",
 //     descripcion: "Corre sin parar.",
 //     imagen: "https://images.unsplash.com/photo-1570018144072-c9ad1f60c527",
@@ -257,7 +258,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Obediente",
 //     raza: "Boxer",
 //     sexo: "Macho",
-//     tamaño: "Grande",
+//     tamano: "Grande",
 //     salud: "Vacunado",
 //     descripcion: "Muy entrenado.",
 //     imagen: "https://images.unsplash.com/photo-1601758125946-9f94b0ae0a1b",
@@ -273,7 +274,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Dormilona",
 //     raza: "Mestiza",
 //     sexo: "Hembra",
-//     tamaño: "Mediano",
+//     tamano: "Mediano",
 //     salud: "Vacunada",
 //     descripcion: "Duerme todo el día.",
 //     imagen: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d",
@@ -289,7 +290,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Valiente",
 //     raza: "Husky Siberiano",
 //     sexo: "Macho",
-//     tamaño: "Grande",
+//     tamano: "Grande",
 //     salud: "Vacunado",
 //     descripcion: "Le gusta el frío.",
 //     imagen: "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8",
@@ -305,7 +306,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Inteligente",
 //     raza: "Pastor Belga",
 //     sexo: "Hembra",
-//     tamaño: "Grande",
+//     tamano: "Grande",
 //     salud: "Vacunada",
 //     descripcion: "Le encanta entrenar.",
 //     imagen: "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb",
@@ -321,7 +322,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Juguetón",
 //     raza: "Schnauzer",
 //     sexo: "Macho",
-//     tamaño: "Mediano",
+//     tamano: "Mediano",
 //     salud: "Vacunado",
 //     descripcion: "Muy amigable.",
 //     imagen: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee",
@@ -337,7 +338,7 @@ export class PerdidosPage implements OnInit {
 //     personalidad: "Sociable",
 //     raza: "Mestiza",
 //     sexo: "Hembra",
-//     tamaño: "Pequeño",
+//     tamano: "Pequeño",
 //     salud: "Vacunada",
 //     descripcion: "Se lleva bien con todos.",
 //     imagen: "https://images.unsplash.com/photo-1504595403659-9088ce801e29",
@@ -348,6 +349,7 @@ export class PerdidosPage implements OnInit {
 //     contactoDueno: "70070070"
 //   }
 // ];
+
 
 //    perdidos.forEach((perdido: any) => {
 //       console.log('cargando perro perdido', perdido);
