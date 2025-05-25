@@ -113,6 +113,14 @@ const routes: Routes = [
   {
     path: 'pet-shop',
     loadChildren: () => import('./pages/pet-shop/pet-shop.module').then( m => m.PetShopPageModule)
+  },
+  {
+    path: 'filtro2',
+    loadChildren: () => import('./pages/filtro2/filtro2.module').then( m => m.Filtro2PageModule)
+  },
+  {
+    path: 'producto',
+    loadChildren: () => import('./pages/producto/producto.module').then( m => m.ProductoPageModule)
   }
 
 

@@ -11,19 +11,23 @@
 <ion-content>
   <img src="{{data?.imagen}}" alt="">
   <ion-title>
+    <ion-icon name="logo-whatsapp"></ion-icon>
     {{data?.whatsapp}}
   </ion-title>
   <ion-title>
+    <ion-icon name="logo-facebook"></ion-icon>
     {{data?.facebook}}
   </ion-title>
   <ion-title>
+    <ion-icon name="logo-instagram"></ion-icon>
     {{data?.instagram}}
   </ion-title>
   <ion-title>
+    <ion-icon name="location-outline"></ion-icon>
     {{data?.googleMaps}}
   </ion-title>
   <ion-title>
-    {{data?.description}}
+    {{data?.descripcion}}
   </ion-title>
   <ion-button [routerLink]="['/adoptar']"> Ver perros</ion-button>
 </ion-content>

@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PetShopPageRoutingModule } from './pet-shop-routing.module';
+import { Filtro2PageRoutingModule } from './filtro2-routing.module';
 
-import { PetShopPage } from './pet-shop.page';
+import { Filtro2Page } from './filtro2.page';
 import { SharedModule } from 'src/app/modules/shared/shared.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { SharedModule } from 'src/app/modules/shared/shared.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    PetShopPageRoutingModule,
+    Filtro2PageRoutingModule,
     SharedModule
   ],
-  declarations: [PetShopPage]
+  declarations: [Filtro2Page]
 })
-export class PetShopPageModule {}
+export class Filtro2PageModule {}

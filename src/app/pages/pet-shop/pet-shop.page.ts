@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   standalone: false,
@@ -8,9 +9,58 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PetShopPage implements OnInit {
 
-  constructor() { }
+  perros: any;
+  constructor(
+    public db: DatabaseService
+  ) { 
+    this.fetchPerros();
+  }
 
   ngOnInit() {
   }
 
+  fetchPerros() {
+    this.db.fetchFirestoreCollection('Perros')
+    .subscribe((res: any) => {
+      console.log('Productos Collection: ', res);
+      this.perros = res;
+    })
+  }
 }
+//       let articulos = [{
+//     "id": 1,
+//     "accesorio": "cama",
+//     "tamaño": "Grande",
+//     "ubicacionTienda": "Calle 10, La Paz",
+//     "salud": "Vacunado",
+//     "descripcion de tamaño": "112x94 cm",
+//     "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUdML24_9TG1b7BtempVBiPM_nJhsD7iLZQg&s",
+//   },
+//   {
+//     "id": 2,
+//     "articulo": "Collar Celeste",
+//     "ubicacion": "Av. Busch #500, La Paz",
+//     "salud": "Vacunada y esterilizada",
+//     "descripcion": "Elegante y Comodo",
+//      "Tamaño del collar: 28 cm"
+//     "imagen": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.collares-perros.es%2Fcoleccion-piel-vaquetilla-rulo%2Fcollar-de-piel-de-vaquetilla-celeste.html&psig=AOvVaw06Ao_eebZqvgVTq-_Csdz9&ust=1748241941124000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODZ6fGCvo0DFQAAAAAdAAAAABAE",
+//    
+//   },
+//   {
+//     "id": 3,
+//     "articulo": "Juguete",
+//     "tamaño": "Mediano",
+//     "ubicacionRefugio": "Zona Central, Cochabamba",
+//     "salud": "Vacunado",
+//     "descripcion": "Excelente perro guardián.",
+//     "imagen": "https://c:\Users\HP\Desktop\clonenuevo\juguetes.jpg",
+//    
+//   },
+//   {
+//     "id": 4,
+//     "Articulo": "Comida",
+//     "peso": 10 gr,
+//     "ubicacion": "Zona Sur, Achimani, La Paz",
+//     "descripcion": "Rico en proteinas",
+//     "imagen": "hc:\Users\HP\Desktop\clonenuevo\croquetas",
+//   },
