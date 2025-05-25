@@ -98,7 +98,11 @@ const routes: Routes = [
   {
     path: 'apadrinar4',
     loadChildren: () => import('./pages/apadrinar4/apadrinar4.module').then( m => m.Apadrinar4PageModule)
+  },  {
+    path: 'notificaciones',
+    loadChildren: () => import('./pages/notificaciones/notificaciones.module').then( m => m.NotificacionesPageModule)
   }
+
 
 ];
 

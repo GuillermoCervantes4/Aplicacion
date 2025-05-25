@@ -1,0 +1,53 @@
+<ion-header class="cabezera" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="boton" routerLink="/home" style="color: white;">
+        <ion-icon class="icono" name="arrow-white"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo">Notificaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content class="notificaciones-content">
+
+    <div class="notificacion-card">
+      <img src="assets/imgs/perrito.png" alt="Perrito en adopción">
+      <div class="noti-texto">
+        <h4>Nuevo perrito en adopción</h4>
+        <p>Conoce a Luna, una Labrador de 2 años que busca un hogar. 🐾 ¡Revisa más!</p>
+      </div>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+
+    <div class="notificacion-card">
+      <img src="assets/imgs/perdido.png" alt="Ayuda perdido">
+      <div class="noti-texto">
+        <h4>⚠ ¡Ayuda! Se ha perdido un perrito</h4>
+        <p>Bella fue vista por última vez en Miraflores. 🐶 Comparte para ayudar.</p>
+      </div>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+
+    <div class="notificacion-card">
+      <img src="assets/imgs/refugio.png" alt="Ayuda invaluable">
+      <div class="noti-texto">
+        <h4>🐾 ¡Tu ayuda es invaluable!</h4>
+        <p>Tu donación mensual para Refugio Laika está por renovarse. Gracias por apoyar.</p>
+      </div>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+
+    <div class="notificacion-card">
+      <img src="assets/imgs/promo.png" alt="Oferta especial">
+      <div class="noti-texto">
+        <h4>🎉 ¡Oferta especial para ti</h4>
+        <p>15% OFF en alimento premium para perritos apadrinados. 🐕 Solo por tiempo limitado.</p>
+      </div>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+
+  </ion-content>
+
+</ion-content>

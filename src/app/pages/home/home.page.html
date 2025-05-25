@@ -1,23 +1,47 @@
+<!--
 <app-header></app-header>
+-->
+<ion-content [fullscreen]="true">
+  <div class="top-bar">
+    <div class="left">
+      <ion-icon class="icono" name="paw" color="primary"></ion-icon>
+      <span class="titulo">Noticias y eventos</span>
+    </div>
+    <ion-icon class="campana" name="notifications" routerLink="/notificaciones" color="primary"></ion-icon>
 
-<ion-content class="cabecera">
-  <ion-icon class="icono" name="paw" color="primary"></ion-icon> 
-  <ion-title>Noticias y eventos</ion-title>
-</ion-content>
-<ion-icon class="campana" name="notifications"></ion-icon>
-<ion-content>
+  </div>
+
   <ion-searchbar></ion-searchbar>
+
+  <div class="card">
+    <img src="assets/imgs/feria.png" alt="Feria de adopción" />
+    <h3>Feria de Adopción de Mascotas Ch’api K’atu</h3>
+
+    <p [class.collapsed]="!verMas">
+      Este evento reunirá a más de 30 perros y gatos en busca de un hogar.
+      Si quieres adoptar, acércate al Parque Urbano Central y conoce a tu futuro compañero.
+      ¡Haz la diferencia en su vida!
+    </p>
+
+    <ion-button size="small" fill="solid" shape="" color="primary" (click)="toggleTexto()" style="color: white;">
+      {{ verMas ? 'Leer Menos' : 'Leer Más' }}
+    </ion-button>
+  </div>
+
+  <div class="card">
+    <img src="assets/imgs/feria2.png" alt="Feria de adopción" />
+    <h3>Perro fachero se vuelve Jesuita</h3>
+
+    <p [class.collapsed]="!verMas">
+      Este perro es muy fachero tanto que
+      se volvio Jesuita y es un ejemplo perruno a
+      seguir
+    </p>
+
+    <ion-button size="small" fill="solid" shape="" color="primary" (click)="toggleTexto()" style="color: white;">
+      {{ verMas ? 'Leer Menos' : 'Leer Más' }}
+    </ion-button>
+  </div>
 </ion-content>
-
-
-
-<!-- <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header> -->
-<!-- 
-<app-card-perros></app-card-perros> -->
-
 
 <app-toolbar></app-toolbar>

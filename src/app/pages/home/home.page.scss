@@ -1,9 +1,71 @@
-.cabecera{
-    text-align: center;
-    font-family: "Fredoka One";
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    font-family: "Fredoka One", sans-serif;
 }
 
-.icono{
-    height: 100px;
-    width: 100px;
+.left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icono {
+    width: 32px;
+    height: 32px;
+}
+
+.titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+ion-icon.campana {
+    font-size: 28px;
+    color: var(--ion-color-medium);
+    transition: color 0.3s ease;
+}
+
+ion-icon.campana:hover {
+    color: var(--ion-color-primary) !important;
+
+    cursor: pointer;
+}
+
+.card {
+    width: 92%;
+    max-width: 340px;
+    margin: 20px auto;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    background: white;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin: 8px 0;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+.card p.collapsed {
+    max-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
