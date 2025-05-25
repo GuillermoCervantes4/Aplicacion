@@ -9,24 +9,23 @@
 </app-header>
 
 <ion-content>
+  <img src="{{data?.imagen}}" alt="">
+  <ion-title>
+    {{data?.whatsapp}}
+  </ion-title>
+  <ion-title>
+    {{data?.facebook}}
+  </ion-title>
+  <ion-title>
+    {{data?.instagram}}
+  </ion-title>
+  <ion-title>
+    {{data?.googleMaps}}
+  </ion-title>
   <ion-title>
     {{data?.description}}
   </ion-title>
-  <ion-title>
-    {{data?.Location}}
-  </ion-title>
-  <ion-title>
-    {{data?.schedule}}
-  </ion-title>
-  <ion-title>
-    {{data?.ownerName}}
-  </ion-title>
-  <ion-title>
-    {{data?.description}}
-  </ion-title>
-  <ion-title>
-    {{data?.description}}
-  </ion-title>
+  <ion-button [routerLink]="['/adoptar']"> Ver perros</ion-button>
 </ion-content>
 
 <app-toolbar></app-toolbar>

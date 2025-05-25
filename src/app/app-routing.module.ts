@@ -106,7 +106,15 @@ const routes: Routes = [
   {
     path: 'perdido/:perdidoId',
     loadChildren: () => import('./pages/perdido/perdido.module').then( m => m.PerdidoPageModule)
+  },  {
+    path: 'reportar2',
+    loadChildren: () => import('./pages/reportar2/reportar2.module').then( m => m.Reportar2PageModule)
+  },
+  {
+    path: 'pet-shop',
+    loadChildren: () => import('./pages/pet-shop/pet-shop.module').then( m => m.PetShopPageModule)
   }
+
 
 
 
