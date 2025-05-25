@@ -1,7 +1,7 @@
 <ion-header class="cabezera" [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button class="boton" defaultHref="/home" style="color: white;">
+      <ion-back-button class="boton" defaultHref="/donacion2" style="color: white;">
         <ion-icon class="icono" name="arrow-white"></ion-icon>
       </ion-back-button>
     </ion-buttons>
@@ -13,18 +13,6 @@
   <p class="subtitulo">Elige un método de pago</p>
 
   <div class="opciones">
-    <ion-item lines="none">
-      <ion-checkbox
-        labelPlacement="end"
-        [checked]="opcionSeleccionada === 'unica'"
-        (ionChange)="seleccionarOpcion('unica')"
-      >
-        Pago por QR
-      </ion-checkbox>
-    </ion-item>
-
-    <div class="linea-divisoria"></div>
-
     <ion-item lines="none">
       <ion-checkbox
         labelPlacement="end"

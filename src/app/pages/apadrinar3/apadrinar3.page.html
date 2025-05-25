@@ -1,52 +1,75 @@
 <ion-header class="cabezera" [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button class="boton" routerLink="/apadrinar2" style="color: white;">
-        <ion-icon class="icono" name="arrow-white"></ion-icon>
-      </ion-back-button>
-    </ion-buttons>
-    <ion-title class="titulo">Apadrinamiento</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button class="boton" defaultHref="/apadrinar2" style="color: white;">
+              <ion-icon class="icono" name="arrow-white"></ion-icon>
+          </ion-back-button>
+      </ion-buttons>
+      <ion-title class="titulo">Apadrinamiento</ion-title>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content class="ion-padding">
-
   <h2 class="form-title">Agrega los datos</h2>
 
-  <ion-item lines="inset">
-    <ion-input label="Numero de tarjeta" label-placement="floating" type="number"></ion-input>
-  </ion-item>
+  <!-- FORMULARIO REACTIVO -->
+  <form [formGroup]="cardForm" (ngSubmit)="guardarTarjeta()">
 
-  <ion-item lines="inset">
-    <ion-input label="Fecha de expiracion" label-placement="floating" type="text"></ion-input>
-  </ion-item>
+    <ion-item lines="inset">
+      <ion-input 
+        label="Número de tarjeta" 
+        label-placement="floating" 
+        type="text"
+        formControlName="numeroTarjeta"
+      ></ion-input>
+    </ion-item>
 
-  <ion-item lines="inset">
-    <ion-input label="Titular Tarjeta" label-placement="floating" type="text"></ion-input>
-  </ion-item>
+    <ion-item lines="inset">
+      <ion-input 
+        label="Fecha de expiración" 
+        label-placement="floating" 
+        type="text"
+        formControlName="fechaExpiracion"
+      ></ion-input>
+    </ion-item>
 
-  <ion-item lines="inset">
-    <ion-input label="CVV" label-placement="floating" type="password" maxlength="4"></ion-input>
-  </ion-item>
+    <ion-item lines="inset">
+      <ion-input 
+        label="Titular Tarjeta" 
+        label-placement="floating" 
+        type="text"
+        formControlName="titularTarjeta"
+      ></ion-input>
+    </ion-item>
 
-  <ion-item lines="none" class="toggle-item">
-    <ion-label style="padding-left: 220px; color: black;">Descontar cada mes</ion-label>
-    <ion-toggle slot="end" color="primary"></ion-toggle>
-  </ion-item>
+    <ion-item lines="inset">
+      <ion-input 
+        label="CVV" 
+        label-placement="floating" 
+        type="password" 
+        maxlength="4"
+        formControlName="cvv"
+      ></ion-input>
+    </ion-item>
 
-  <ion-button 
-    class="btn-flotante" 
-    expand="block"
-    color="terciary"
-    routerLink="/apadrinar4"
-  >
-    Siguiente
-  </ion-button>
+    <ion-item lines="none" class="toggle-item">
+      <ion-label style="padding-left: 220px; color: black;">Descontar cada mes</ion-label>
+      <ion-toggle slot="end" color="primary"></ion-toggle>
+    </ion-item>
+
+    <ion-button 
+      class="btn-flotante" 
+      expand="block"
+      color="terciary"
+      type="submit"
+      routerLink="/apadrinar4"
+    >
+      Siguiente
+    </ion-button>
+
+  </form>
 </ion-content>
 
 <ion-footer>
-
-<app-toolbar></app-toolbar>
-
+  <app-toolbar></app-toolbar>
 </ion-footer>
