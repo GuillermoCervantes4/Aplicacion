@@ -4,16 +4,31 @@
 <ion-content [fullscreen]="true">
   <div class="top-bar">
     <div class="left">
-      <ion-icon class="icono" name="paw" color="primary"></ion-icon>
+      <ion-icon style="padding-bottom: 10px;" class="icono" name="paw" color="primary"></ion-icon>
       <span class="titulo">Noticias y eventos</span>
     </div>
     <ion-icon class="campana" name="notifications" routerLink="/notificaciones" color="primary"></ion-icon>
+  </div>
+  <ion-searchbar></ion-searchbar>
+  <div class="card" *ngFor="let evento of eventos; let i = index">
+    <img [src]="evento.imagen" [alt]="evento.titulo" />
+    <h3>{{ evento.titulo }}</h3>
 
+    <p [class.collapsed]="!verMas[i]">
+      {{ evento.descripcion }}
+    </p>
+
+    <ion-button size="small" fill="solid" color="primary" (click)="toggleTexto(i)">
+      {{ verMas[i] ? 'Leer Menos' : 'Leer Más' }}
+    </ion-button>
   </div>
 
-  <ion-searchbar></ion-searchbar>
+</ion-content>
 
-  <div class="card">
+<app-toolbar></app-toolbar>
+
+<!--
+<div class="card">
     <img src="assets/imgs/feria.png" alt="Feria de adopción" />
     <h3>Feria de Adopción de Mascotas Ch’api K’atu</h3>
 
@@ -42,6 +57,4 @@
       {{ verMas ? 'Leer Menos' : 'Leer Más' }}
     </ion-button>
   </div>
-</ion-content>
-
-<app-toolbar></app-toolbar>
+-->

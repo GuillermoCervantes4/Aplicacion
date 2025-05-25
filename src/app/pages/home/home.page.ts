@@ -7,12 +7,35 @@ import { DatabaseService } from 'src/app/services/database.service';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  verMas: boolean[] = []; 
+  eventos = [
+    {
+      titulo: 'Feria de Adopción de Mascotas Ch’api K’atu',
+      descripcion: `Este evento reunirá a más de 30 perros y gatos en busca de un hogar.
+      Si quieres adoptar, acércate al Parque Urbano Central y conoce a tu futuro compañero.
+      ¡Haz la diferencia en su vida!`,
+      imagen: 'assets/imgs/feria.png'
+    },
+    {
+      titulo: 'Perro fachero se vuelve Jesuita',
+      descripcion: `Este perro es muy fachero tanto que
+      se volvió Jesuita y es un ejemplo perruno a seguir`,
+      imagen: 'assets/imgs/feria2.png'
+    }
+    
+  ];
 
-  verMas: boolean = false; // << Esta es la propiedad que controlarás
-
-  constructor(public db: DatabaseService) { }
+  constructor() {}
 
   ngOnInit() {
+    
+    this.verMas = this.eventos.map(() => false);
+  }
+
+  toggleTexto(index: number) {
+    this.verMas[index] = !this.verMas[index];
+  }
+}
 
 
 
@@ -348,10 +371,3 @@ export class HomePage implements OnInit {
     //this.db.fetchFirestoreCollection('book')
     //.subscribe((res:any) => {console.log(res);},
     //(error:any) => {console.log(error);});
-
-  }
-
-  toggleTexto() {
-    this.verMas = !this.verMas;
-  }
-}
