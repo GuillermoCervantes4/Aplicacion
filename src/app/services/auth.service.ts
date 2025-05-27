@@ -75,28 +75,21 @@ export class AuthService {
     });
   }
 
-
-  getProfile(uid: string): Promise<any> {
-    return new Promise((resolve, reject) => {
+  getProfile(uid: any) {
+    return runInInjectionContext(this.injector, () => {
       this.db.getDocumentById('users', uid).subscribe(
         (res: any) => {
-          if (res) {
-            res.id = uid; // asegúrate de tener el ID guardado también
-            localStorage.setItem('profile', JSON.stringify(res));
-            this.profile = res;
-            console.log('Perfil cargado:', res);
-            resolve(res);
-          } else {
-            reject('Perfil no encontrado');
-          }
+          console.log('perfil desde firebase', res);
+          localStorage.setItem('profile', JSON.stringify(res));
+          this.profile = res;
         },
         (error: any) => {
-          console.error('Error al obtener perfil:', error);
-          reject(error);
+          console.log(error);
         }
       );
     });
   }
+
 
   async loginUser(email: string, password: string) {
     return runInInjectionContext(this.injector, async () => {
@@ -104,27 +97,19 @@ export class AuthService {
         const userCredential = await this.afAuth.signInWithEmailAndPassword(email, password);
         const user = userCredential.user;
 
-        if (user && user.uid) {
+        if (user) {
+          localStorage.setItem('user', JSON.stringify(user));
           console.log('Usuario autenticado:', user);
 
-          const perfil = await this.getProfile(user.uid);
-          localStorage.setItem('user', JSON.stringify(user));
-
-          const toast = await this.toastCtrl.create({
-            message: 'Sesión iniciada correctamente',
-            duration: 2000,
-            color: 'success'
-          });
-          await toast.present();
-
-          this.router.navigateByUrl('/home'); // o cambia por la ruta de tu página principal
+          this.getProfile(user.uid); // Mantiene la lógica actual de obtener y guardar perfil
+          this.router.navigateByUrl('/profile');
         } else {
           throw new Error('No se pudo obtener el usuario');
         }
       } catch (error) {
         console.error('Error al iniciar sesión:', error);
         const toast = await this.toastCtrl.create({
-          message: 'Error al iniciar sesión. Verifica tus credenciales.',
+          message: 'Error al iniciar sesión.',
           duration: 2000,
           color: 'danger'
         });
@@ -133,4 +118,12 @@ export class AuthService {
       }
     });
   }
+
+
+/*   verifyIsLogued() {
+    let user = localStorage.getItem('user');
+    this.isLogued = user ? true : false;
+    return user ? true : false;
+  }
+ */
 }
