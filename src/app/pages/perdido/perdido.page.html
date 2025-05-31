@@ -6,17 +6,17 @@
 
 <ion-content>
   <ion-card>
-    <img [src]="data?.imagen" />
+    <img class="imagen" [src]="data?.imagen" />
     <ion-card-header>
-      <ion-card-title>{{data?.nombre || data?.name}}</ion-card-title>
+      <ion-card-title class="nombre">{{data?.nombre || data?.name}}</ion-card-title>
       <ion-text>
         Se busca!
       </ion-text>
        <ion-text>
-        <p><strong>Zona</strong>: {{data?.edad}}</p>
+        <p><strong>Zona</strong>: {{data?.zonaPerdida}}</p>
       </ion-text>
        <ion-text>
-        <p><strong>Fecha de desaparicion</strong>: {{data?.zonaPerdida}}</p>
+        <p><strong>Fecha de desaparición</strong>: {{data?.fechaDesaparicion}}</p>
       </ion-text>
       <ion-text>
         <p><strong>Raza</strong>: {{data?.raza || data?.descripcion}}</p>
@@ -29,6 +29,9 @@
       </ion-text>
       <ion-text>
         <p><strong>Contacto</strong>: {{data?.contactoDueno}}</p>
+      </ion-text>
+      <ion-text>
+        <p>Si lo has visto o tienes información, por favor comunícate. ¡Su familia lo está esperando con ansias! 🙏🐾</p>
       </ion-text>
     </ion-card-header>
     <ion-card-content>

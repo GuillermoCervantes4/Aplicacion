@@ -1,11 +1,8 @@
 .carta-personalizada {
   width: 352.95px;
   height: 150.66px;
-  --background: #f9f9f9;
   border-radius: 12px;
   padding: 10px;
-  display: flex;
-  align-items: center;
 }
 
 .imagen-container {
@@ -19,15 +16,11 @@
 .imagen-albergue {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .contenido {
   margin-left: 14px;
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .titulo {

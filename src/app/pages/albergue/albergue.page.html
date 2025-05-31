@@ -9,34 +9,36 @@
 </app-header>
 
 <ion-content>
-  <img src="{{data?.imagen}}" alt="">
+  <img class="imagen" src="{{data?.imagen}}" alt="">
+  <div>
     <ion-button fill="solid" color="primary" [routerLink]="['/donacion1']">
-    <ion-icon name="heart-sharp"></ion-icon>
+    <ion-icon class="icono" name="heart-sharp"></ion-icon>
     Donar
   </ion-button>
-  <div>
-    
   </div>
-  <ion-title>
-    <ion-icon name="logo-whatsapp"></ion-icon>
+  <ion-title class="info">
+    <ion-icon class="icono" name="logo-whatsapp"></ion-icon>
     {{data?.whatsapp}}
   </ion-title>
-  <ion-title>
-    <ion-icon name="logo-facebook"></ion-icon>
+  <ion-title class="info">
+    <ion-icon class="icono" name="logo-facebook"></ion-icon>
     {{data?.facebook}}
   </ion-title>
-  <ion-title>
-    <ion-icon name="logo-instagram"></ion-icon>
+  <ion-title class="info">
+    <ion-icon class="icono" name="logo-instagram"></ion-icon>
     {{data?.instagram}}
   </ion-title>
-  <ion-title>
-    <ion-icon name="location-outline"></ion-icon>
+  <ion-title class="info2">
+    <ion-icon class="icono" name="location-sharp"></ion-icon>
     {{data?.googleMaps}}
+  </ion-title>
+  <ion-title class="subtitulo">
+    Información del Albergue:
   </ion-title>
   <ion-title>
     {{data?.descripcion}}
   </ion-title>
-  <ion-button [routerLink]="['/adoptar']"> Ver perros</ion-button>
+  <ion-button color="turquesa" class="boton" [routerLink]="['/adoptar']"> Ver perros</ion-button>
 </ion-content>
 
 <app-toolbar></app-toolbar>

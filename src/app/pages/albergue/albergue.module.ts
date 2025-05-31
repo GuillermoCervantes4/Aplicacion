@@ -9,13 +9,14 @@ import { AlberguePageRoutingModule } from './albergue-routing.module';
 import { AlberguePage } from './albergue.page';
 import { SharedModule } from 'src/app/modules/shared/shared.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     AlberguePageRoutingModule,
-    SharedModule
+    SharedModule, 
   ],
   declarations: [AlberguePage]
 })

@@ -11,7 +11,7 @@
   <ion-searchbar></ion-searchbar>
   <ion-grid>
     <ion-row>
-      <ion-col size="7" *ngFor="let albergue of albergues">
+      <ion-col size="12"  *ngFor="let albergue of albergues">
         <ion-item [href]="'/albergue/'+albergue.id">
           <app-card [albergue]="albergue">
             <!-- <ion-label>
