@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from 'src/app/services/database.service';
+import { FiltroService } from 'src/app/services/filtro.service';
 
 @Component({
   standalone: false,
@@ -9,12 +10,14 @@ import { DatabaseService } from 'src/app/services/database.service';
 })
 export class AdoptarPage implements OnInit {
 
-  perros: any;
+  perros: any[] = [];           // Los que se muestran
+  perrosOriginal: any[] = [];   // Los que no se tocan
+  // perros: any;
   constructor(
-    public db: DatabaseService
+    public db: DatabaseService,
+    private filtroService: FiltroService
   ) { 
     this.fetchPerros();
-    
   }
 
   ngOnInit() {
@@ -24,8 +27,22 @@ export class AdoptarPage implements OnInit {
     this.db.fetchFirestoreCollection('Perros')
     .subscribe((res: any) => {
       console.log('Perros Collection: ', res);
+      this.perrosOriginal = res;
       this.perros = res;
-    })
+    });
+  }
+
+  filtrarPerros(event: any) {
+    const texto = event.target.value?.toLowerCase().trim() || '';
+
+    if (texto === '') {
+      this.perros = [...this.perrosOriginal]; // Mostrar todos si el input está vacío
+    } else {
+      // Filtrar por el nombre del perro (puedes cambiarlo a raza o edad si quieres)
+      this.perros = this.perrosOriginal.filter(perro =>
+        perro.nombre?.toLowerCase().includes(texto)
+      );
+    }
   }
 
 //       let dogs = [{
@@ -34,7 +51,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Juguetón",
 //     "raza": "Labrador",
 //     "sexo": "Macho",
-//     "tamaño": "Grande",
+//     "tamano": "Grande",
 //     "peso": 30,
 //     "ubicacionRefugio": "Calle 10, La Paz",
 //     "salud": "Vacunado",
@@ -48,7 +65,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Cariñosa",
 //     "raza": "Golden Retriever",
 //     "sexo": "Hembra",
-//     "tamaño": "Grande",
+//     "tamano": "Grande",
 //     "peso": 28,
 //     "ubicacionRefugio": "Av. Busch #100, La Paz",
 //     "salud": "Vacunada y esterilizada",
@@ -62,7 +79,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Protector",
 //     "raza": "Pastor Alemán",
 //     "sexo": "Macho",
-//     "tamaño": "Grande",
+//     "tamano": "Grande",
 //     "peso": 35,
 //     "ubicacionRefugio": "Zona Central, Cochabamba",
 //     "salud": "Vacunado",
@@ -76,7 +93,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Tranquila",
 //     "raza": "Beagle",
 //     "sexo": "Hembra",
-//     "tamaño": "Mediano",
+//     "tamano": "Mediano",
 //     "peso": 14,
 //     "ubicacionRefugio": "Zona Sur, La Paz",
 //     "salud": "Vacunada",
@@ -90,7 +107,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Enérgico",
 //     "raza": "Husky Siberiano",
 //     "sexo": "Macho",
-//     "tamaño": "Grande",
+//     "tamano": "Grande",
 //     "peso": 27,
 //     "ubicacionRefugio": "Av. América, Cochabamba",
 //     "salud": "Vacunado y desparasitado",
@@ -104,7 +121,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Dócil",
 //     "raza": "Poodle",
 //     "sexo": "Hembra",
-//     "tamaño": "Pequeño",
+//     "tamano": "Pequeño",
 //     "peso": 8,
 //     "ubicacionRefugio": "Centro Histórico, Sucre",
 //     "salud": "Vacunada",
@@ -118,7 +135,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Leal",
 //     "raza": "Rottweiler",
 //     "sexo": "Macho",
-//     "tamaño": "Grande",
+//     "tamano": "Grande",
 //     "peso": 40,
 //     "ubicacionRefugio": "Zona Villa Fátima, La Paz",
 //     "salud": "Vacunado y castrado",
@@ -132,7 +149,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Amigable",
 //     "raza": "Cocker Spaniel",
 //     "sexo": "Hembra",
-//     "tamaño": "Mediano",
+//     "tamano": "Mediano",
 //     "peso": 12,
 //     "ubicacionRefugio": "Zona Sopocachi, La Paz",
 //     "salud": "Vacunada y desparasitada",
@@ -146,7 +163,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Obediente",
 //     "raza": "Boxer",
 //     "sexo": "Macho",
-//     "tamaño": "Grande",
+//     "tamano": "Grande",
 //     "peso": 33,
 //     "ubicacionRefugio": "Calle Suárez #15, Santa Cruz",
 //     "salud": "Vacunado y desparasitado",
@@ -160,7 +177,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Alegre",
 //     "raza": "Mestizo",
 //     "sexo": "Hembra",
-//     "tamaño": "Mediano",
+//     "tamano": "Mediano",
 //     "peso": 18,
 //     "ubicacionRefugio": "Av. del Maestro, Oruro",
 //     "salud": "Vacunada",
@@ -174,7 +191,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Fuerte",
 //     "raza": "Pitbull",
 //     "sexo": "Macho",
-//     "tamaño": "Grande",
+//     "tamano": "Grande",
 //     "peso": 38,
 //     "ubicacionRefugio": "Zona Norte, Tarija",
 //     "salud": "Vacunado y castrado",
@@ -188,7 +205,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Curiosa",
 //     "raza": "Schnauzer",
 //     "sexo": "Hembra",
-//     "tamaño": "Mediano",
+//     "tamano": "Mediano",
 //     "peso": 15,
 //     "ubicacionRefugio": "Zona Villa Armonía, La Paz",
 //     "salud": "Vacunada",
@@ -202,7 +219,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Dominante",
 //     "raza": "Dóberman",
 //     "sexo": "Macho",
-//     "tamaño": "Grande",
+//     "tamano": "Grande",
 //     "peso": 36,
 //     "ubicacionRefugio": "Zona Sur, El Alto",
 //     "salud": "Vacunado",
@@ -216,7 +233,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Cariñosa",
 //     "raza": "Samoyedo",
 //     "sexo": "Hembra",
-//     "tamaño": "Grande",
+//     "tamano": "Grande",
 //     "peso": 25,
 //     "ubicacionRefugio": "Calle 8, La Paz",
 //     "salud": "Vacunada y esterilizada",
@@ -230,7 +247,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Valiente",
 //     "raza": "Bulldog",
 //     "sexo": "Macho",
-//     "tamaño": "Mediano",
+//     "tamano": "Mediano",
 //     "peso": 20,
 //     "ubicacionRefugio": "Av. Blanco Galindo, Cochabamba",
 //     "salud": "Vacunado",
@@ -244,7 +261,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Juguetón",
 //     "raza": "Terrier",
 //     "sexo": "Macho",
-//     "tamaño": "Pequeño",
+//     "tamano": "Pequeño",
 //     "peso": 9,
 //     "ubicacionRefugio": "Zona Belén, Potosí",
 //     "salud": "Vacunado",
@@ -258,7 +275,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Traviesa",
 //     "raza": "Shih Tzu",
 //     "sexo": "Hembra",
-//     "tamaño": "Pequeño",
+//     "tamano": "Pequeño",
 //     "peso": 6,
 //     "ubicacionRefugio": "Zona Central, Sucre",
 //     "salud": "Vacunada",
@@ -272,7 +289,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Dormilón",
 //     "raza": "Basset Hound",
 //     "sexo": "Macho",
-//     "tamaño": "Mediano",
+//     "tamano": "Mediano",
 //     "peso": 24,
 //     "ubicacionRefugio": "Zona Alto Lima, El Alto",
 //     "salud": "Vacunado",
@@ -286,7 +303,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Dócil",
 //     "raza": "Cruzado",
 //     "sexo": "Hembra",
-//     "tamaño": "Mediano",
+//     "tamano": "Mediano",
 //     "peso": 16,
 //     "ubicacionRefugio": "Zona San Pedro, La Paz",
 //     "salud": "Vacunada",
@@ -300,7 +317,7 @@ export class AdoptarPage implements OnInit {
 //     "personalidad": "Fiel",
 //     "raza": "Pastor Belga",
 //     "sexo": "Macho",
-//     "tamaño": "Grande",
+//     "tamano": "Grande",
 //     "peso": 32,
 //     "ubicacionRefugio": "Zona Miraflores, La Paz",
 //     "salud": "Vacunado",

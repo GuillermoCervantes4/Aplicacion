@@ -6,46 +6,50 @@
 
 <ion-content>
   <ion-list>
-    <ion-title class="titulo">Tamano</ion-title>
+    <ion-title>Tamaño</ion-title>
     <ion-item>
       <ion-label>Grande</ion-label>
-      <ion-checkbox slot="end"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="tamanos.grande" slot="end"></ion-checkbox>
     </ion-item>
     <ion-item>
       <ion-label>Mediano</ion-label>
-      <ion-checkbox slot="end"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="tamanos.mediano" slot="end"></ion-checkbox>
     </ion-item>
     <ion-item>
-      <ion-label>Pequeno</ion-label>
-      <ion-checkbox slot="end"></ion-checkbox>
+      <ion-label>Pequeño</ion-label>
+      <ion-checkbox [(ngModel)]="tamanos.pequeno" slot="end"></ion-checkbox>
     </ion-item>
 
-    <ion-title>Edad</ion-title>
+    <!-- <ion-title>Edad</ion-title>
     <ion-item>
       <ion-label>Cachorro</ion-label>
-      <ion-checkbox slot="end"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="edades.cachorro" slot="end"></ion-checkbox>
     </ion-item>
     <ion-item>
       <ion-label>Joven</ion-label>
-      <ion-checkbox slot="end"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="edades.joven" slot="end"></ion-checkbox>
     </ion-item>
     <ion-item>
       <ion-label>Adulto</ion-label>
-      <ion-checkbox slot="end"></ion-checkbox>
-    </ion-item>
+      <ion-checkbox [(ngModel)]="edades.adulto" slot="end"></ion-checkbox>
+    </ion-item> -->
 
     <ion-title>Sexo</ion-title>
     <ion-item>
       <ion-label>Macho</ion-label>
-      <ion-checkbox slot="end"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="sexos.macho" slot="end"></ion-checkbox>
     </ion-item>
     <ion-item>
       <ion-label>Hembra</ion-label>
-      <ion-checkbox slot="end"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="sexos.hembra" slot="end"></ion-checkbox>
     </ion-item>
   </ion-list>
-  <ion-button expand="full" [routerLink]="['/perdidos']">
+
+  <ion-button expand="full" (click)="aplicarFiltros()">
     Aplicar
+  </ion-button>
+
+</ion-content>
 
 
 

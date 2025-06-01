@@ -9,7 +9,8 @@ import { DatabaseService } from 'src/app/services/database.service';
 })
 export class PerdidosPage implements OnInit {
 
-  public perdidos: any;
+  public perdidos: any[]=[]; 
+  public perdidosOriginal: any[]=[]; 
   constructor(
     public db:DatabaseService
   ) {
@@ -24,8 +25,21 @@ export class PerdidosPage implements OnInit {
     this.db.fetchFirestoreCollection('Perdidos')
     .subscribe((res: any) => {
       console.log('Perros perdidos Collection: ', res);
+      this.perdidosOriginal = res; // Guardar la colección original
       this.perdidos = res;
     })
+  }
+
+  filtrarPerdidos(event: any) {
+    const texto = event.target.value?.toLowerCase().trim() || '';
+
+    if (texto === '') {
+      this.perdidos = [...this.perdidosOriginal]; // Mostrar todos si el input está vacío
+    } else {
+      this.perdidos = this.perdidosOriginal.filter(perdido =>
+        perdido.nombre?.toLowerCase().includes(texto)
+      );
+    }
   }
 //  let perdidos = [
 //   {
