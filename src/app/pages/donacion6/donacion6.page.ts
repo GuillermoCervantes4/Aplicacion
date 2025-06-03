@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DatabaseService } from 'src/app/services/database.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-donacion6',
@@ -10,10 +12,14 @@ import { DatabaseService } from 'src/app/services/database.service';
 })
 export class Donacion6Page implements OnInit {
   cardForm!: FormGroup;
+  albergueId: string | null = null;
+  albergueNombre: string | null = null;
+
 
   constructor(
     public formBuilder: FormBuilder,
-    public db: DatabaseService
+    public db: DatabaseService,
+    private route: ActivatedRoute
   ) {
     this.cardForm = this.formBuilder.group({
       numeroTarjeta: ['', [Validators.required, Validators.minLength(16)]],
@@ -24,14 +30,22 @@ export class Donacion6Page implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+    this.albergueId = params['albergueId'] || null;
+    this.albergueNombre = params['albergueNombre'] || null;
+    console.log('Recibido desde ruta:', this.albergueId, this.albergueNombre);
+  });
+  }
 
   guardarTarjeta() {
     if (this.cardForm.valid) {
       const datos = {
         ...this.cardForm.value,
         tipo: 'donacion',
-        fecha: new Date()
+        fecha: new Date(),
+        albergueId: this.albergueId,
+        albergueNombre: this.albergueNombre
       };
 
       console.log('Guardando datos del formulario:', datos);
