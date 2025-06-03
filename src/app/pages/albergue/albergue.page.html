@@ -38,7 +38,7 @@
   <ion-title>
     {{data?.descripcion}}
   </ion-title>
-  <ion-button color="turquesa" class="boton" [routerLink]="['/adoptar']"> Ver perros</ion-button>
+  <ion-button color="turquesa" class="boton" [routerLink]="['/adoptar']" [queryParams]="{ albergueId: id, albergueNombre: data?.nombre }"> Ver perros</ion-button>
 </ion-content>
 
 <app-toolbar></app-toolbar>

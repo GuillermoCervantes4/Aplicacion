@@ -19,7 +19,7 @@
       </ion-text>
       <div>
         <button class="boton" >Adoptar</button>
-        <button class="boton" [routerLink]="['/apadrinar1']">Apadrinar</button>
+        <button class="boton" [routerLink]="['/apadrinar1']" [queryParams]="{albergueId: albergueId, albergueNombre: albergueNombre, perroNombre: data?.nombre}">Apadrinar</button>
       </div>
     </ion-card-header>
     <ion-card-content>

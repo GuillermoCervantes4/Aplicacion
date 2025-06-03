@@ -6,7 +6,8 @@
   <ion-grid>
     <ion-row>
       <ion-col size="6" *ngFor="let perro of perros" >
-        <ion-item [href]="'/perrito/'+perro.id">
+        <ion-item [routerLink]="['/perrito', perro.id]" 
+  [queryParams]="{ albergueId: albergueId, albergueNombre: albergueNombre }">
           <app-card-perros  [perro]="perro">
           </app-card-perros>
         </ion-item>

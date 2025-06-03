@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from 'src/app/services/database.service';
 import { FiltroService } from 'src/app/services/filtro.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   standalone: false,
@@ -9,11 +10,13 @@ import { FiltroService } from 'src/app/services/filtro.service';
   styleUrls: ['./adoptar.page.scss'],
 })
 export class AdoptarPage implements OnInit {
+  albergueId: string | null = null;
+  albergueNombre: string | null = null;
 
   perros: any[] = [];           // Los que se muestran
   perrosOriginal: any[] = [];   // Los que no se tocan
   // perros: any;
-  constructor(
+  constructor(private route: ActivatedRoute,
     public db: DatabaseService,
     private filtroService: FiltroService
   ) { 
@@ -21,6 +24,10 @@ export class AdoptarPage implements OnInit {
   }
 
   ngOnInit() {
+      this.route.queryParams.subscribe(params => {
+      this.albergueId = params['albergueId'];
+      this.albergueNombre = params['albergueNombre'];
+    });
   }
 
   fetchPerros() {
