@@ -1,0 +1,54 @@
+<ion-header class="cabezera" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="boton" routerLink="/pet1" style="color: white;">
+        <ion-icon class="icono" name="arrow-white"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo">Lista de compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-between">
+      <ion-col size="6"><strong>Productos</strong></ion-col>
+      <ion-col size="6" class="ion-text-right"><strong>precio</strong></ion-col>
+    </ion-row>
+
+    <!-- Producto 1 -->
+    <ion-row class="ion-justify-content-between item-linea">
+      <ion-col size="6">Hueso 1/9(1)</ion-col>
+      <ion-col size="6" class="ion-text-right">15 Bs</ion-col>
+    </ion-row>
+
+    <!-- Producto 2 -->
+    <ion-row class="ion-justify-content-between item-linea">
+      <ion-col size="6">Cama(1)</ion-col>
+      <ion-col size="6" class="ion-text-right">90 Bs</ion-col>
+    </ion-row>
+
+    <!-- Producto 3 -->
+    <ion-row class="ion-justify-content-between item-linea">
+      <ion-col size="6">
+        COMIDA DOG CHOW®<br />
+        ADULTO RAZA PEQUEÑA(2)
+      </ion-col>
+      <ion-col size="6" class="ion-text-right">160 Bs</ion-col>
+    </ion-row>
+
+    <!-- Total -->
+    <ion-row class="ion-justify-content-between total-linea ion-margin-top">
+      <ion-col size="6"><strong>Total:</strong></ion-col>
+      <ion-col size="6" class="ion-text-right"><strong>265 Bs</strong></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Botón Pagar -->
+  <div class="boton-pagar-container">
+    <ion-button expand="block" color="success" class="boton-pagar" routerLink="/pet3">Pagar</ion-button>
+  </div>
+
+</ion-content>

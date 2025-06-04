@@ -9,24 +9,38 @@ import { DatabaseService } from 'src/app/services/database.service';
 })
 export class PetShopPage implements OnInit {
 
-  perros: any;
+  productos: any[]=[]; 
+  productosoriginal: any[]=[]; 
   constructor(
     public db: DatabaseService
   ) { 
-    this.fetchPerros();
+    this.fetchProductos();
   }
 
   ngOnInit() {
   }
 
-  fetchPerros() {
-    this.db.fetchFirestoreCollection('Perros')
+  fetchProductos() {
+    this.db.fetchFirestoreCollection('Productos')
     .subscribe((res: any) => {
       console.log('Productos Collection: ', res);
-      this.perros = res;
+      this.productosoriginal = res;
+      this.productos = res;
     })
   }
+  filtrarProductos(event: any) {
+    const texto = event.target.value?.toLowerCase().trim() || '';
+
+    if (texto === '') {
+      this.productos = [...this.productosoriginal]; // Mostrar todos si el input está vacío
+    } else {
+      this.productos = this.productosoriginal.filter(producto =>
+      producto.articulo.toLowerCase().includes(texto) 
+      );
+    }
+  }
 }
+
 //       let articulos = [{
 //     "id": 1,
 //     "accesorio": "cama",

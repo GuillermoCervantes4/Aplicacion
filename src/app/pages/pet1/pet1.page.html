@@ -1,0 +1,48 @@
+<app-header>
+  <ion-title routerLink="/pet-shop">Producto</ion-title>
+</app-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-card class="producto-card">
+    <ion-img src="assets/imgs/comida.png" class="imagen-producto"></ion-img>
+
+    <ion-card-content>
+      <h2 class="titulo-producto">
+        COMIDA DOG CHOW® ADULTO RAZA PEQUEÑA (80bs)
+      </h2>
+
+      <p class="descripcion-producto">
+        Alimento balanceado completo para perros adultos de tamaño pequeño de actividad normal de 1 a 7 años de edad.
+      </p>
+
+      <ul class="lista-producto">
+        <li>Ingredientes de calidad en un alimento 100% completo y balanceado.</li>
+        <li>Prebiótico natural, para equilibrar la flora intestinal.</li>
+        <li>Omegas 6 y 3.</li>
+        <li>Niveles de sodio adecuado.</li>
+      </ul>
+
+      <div class="cantidad-container">
+        <p class="cantidad-label">Cantidad</p>
+        <div class="cantidad-control">
+          <ion-button class="boton-cantidad" fill="clear" (click)="disminuirCantidad()">
+            <ion-icon name="remove-outline"></ion-icon>
+          </ion-button>
+
+          <div class="cantidad-box">
+            {{ cantidad }}
+          </div>
+
+          <ion-button class="boton-cantidad" fill="clear" (click)="aumentarCantidad()">
+            <ion-icon name="add-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+
+      <ion-button expand="block" color="success" class="boton-agregar" routerLink="/pet2">
+        Agregar carrito
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

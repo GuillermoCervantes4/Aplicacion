@@ -1,11 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>petShop</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header>pet - shop</app-header>
 
-<ion-searchbar></ion-searchbar>
+<ion-content>
+  <ion-searchbar (ionInput)="filtrarProductos($event)"></ion-searchbar>
+  <ion-button class="filtro" color="black" [routerLink]="['/filtro']"><ion-icon name="filter"></ion-icon>Filtro</ion-button>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let producto of productos" >
+        <ion-item [routerLink]="['/pet1']">
+          <app-card-perros  [producto]="producto">
+          </app-card-perros>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
 
-
+<!-- <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">pet-shop</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
 
 <app-toolbar></app-toolbar>

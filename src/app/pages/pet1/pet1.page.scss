@@ -1,0 +1,102 @@
+
+
+.producto-card {
+    color: black;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+
+    .imagen-producto {
+        width: 300px;
+        margin: 0 auto 10px auto;
+    }
+
+    .titulo-producto {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    .descripcion-producto {
+        text-align: left;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .lista-producto {
+        text-align: left;
+        font-size: 14px;
+        padding-left: 20px;
+        margin-bottom: 16px;
+    }
+
+    .cantidad-container {
+        text-align: center;
+        margin-bottom: 16px;
+
+        .cantidad-label {
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .cantidad-control {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+
+            .boton-cantidad {
+                background-color: #e0e0e0;
+                border-radius: 8px;
+                width: 32px;
+                height: 32px;
+                --padding-start: 0;
+                --padding-end: 0;
+                --border-radius: 8px;
+                --box-shadow: none;
+                --color: black;
+            }
+
+            .cantidad-box {
+                background-color: #3880FF;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .boton-agregar {
+        --background: #4CAF50;
+        --color: white;
+        --border-radius: 8px;
+        font-weight: bold;
+        margin-top: 8px;
+    }
+}
+
+
+.boton {
+    margin-left: 25px;
+    width: 42px;
+    height: 42px;
+    background-color: #6cd9b0;
+    border-radius: 10px;
+}
+
+.titulo {
+    font-weight: bold;
+}
+
+.icono {
+    color: var(--ion-color-light);
+}
+
+
+
+
+

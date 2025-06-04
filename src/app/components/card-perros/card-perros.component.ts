@@ -10,6 +10,7 @@ export class CardPerrosComponent  implements OnInit {
 
   @Input() perro: any
   @Input() perdido: any
+  @Input() producto: any
   constructor() { }
 
   ngOnInit() {}

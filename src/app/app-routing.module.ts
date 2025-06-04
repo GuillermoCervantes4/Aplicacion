@@ -106,7 +106,8 @@ const routes: Routes = [
   {
     path: 'perdido/:perdidoId',
     loadChildren: () => import('./pages/perdido/perdido.module').then( m => m.PerdidoPageModule)
-  },  {
+  },
+  {
     path: 'reportar2',
     loadChildren: () => import('./pages/reportar2/reportar2.module').then( m => m.Reportar2PageModule)
   },
@@ -121,7 +122,32 @@ const routes: Routes = [
   {
     path: 'producto',
     loadChildren: () => import('./pages/producto/producto.module').then( m => m.ProductoPageModule)
-  }
+  },
+  {
+    path: 'pet1',
+    loadChildren: () => import('./pages/pet1/pet1.module').then( m => m.Pet1PageModule)
+  },
+  {
+    path: 'pet2',
+    loadChildren: () => import('./pages/pet2/pet2.module').then( m => m.Pet2PageModule)
+  },
+  {
+    path: 'pet3',
+    loadChildren: () => import('./pages/pet3/pet3.module').then( m => m.Pet3PageModule)
+  },
+  {
+    path: 'pet4',
+    loadChildren: () => import('./pages/pet4/pet4.module').then( m => m.Pet4PageModule)
+  },
+  {
+    path: 'pet5',
+    loadChildren: () => import('./pages/pet5/pet5.module').then( m => m.Pet5PageModule)
+  },  {
+    path: 'pet6',
+    loadChildren: () => import('./pages/pet6/pet6.module').then( m => m.Pet6PageModule)
+  },
+
+ 
 
 
 
