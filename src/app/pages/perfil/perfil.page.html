@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titulo">Mi Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="perfil-content">
+  <div class="perfil-container">
+    <img src="assets/imgs/usuario.jpg" alt="Usuario" class="perfil-img" />
+    <h2 class="nombre">Juan Pérez</h2>
+    <p class="texto">
+      <strong>Correo electrónico:</strong> jaja23&#64;gmail.com
+    </p>
+  </div>
+
+  <div class="seccion">
+    <h3>Historial de adopciones</h3>
+    <div class="card-container">
+      <div class="mini-card" *ngFor="let perro of perrosAdoptados">
+        <img [src]="perro.imagen" [alt]="perro.nombre" />
+        <p>{{ perro.nombre }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <h3>Historial de apadrinados</h3>
+    <div class="card-container">
+      <div class="mini-card" *ngFor="let perro of perrosApadrinados">
+        <img [src]="perro.imagen" [alt]="perro.nombre" />
+        <p>{{ perro.nombre }}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <app-toolbar></app-toolbar>
+</ion-footer>

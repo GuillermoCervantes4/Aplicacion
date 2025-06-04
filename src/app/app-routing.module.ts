@@ -146,6 +146,10 @@ const routes: Routes = [
     path: 'pet6',
     loadChildren: () => import('./pages/pet6/pet6.module').then( m => m.Pet6PageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
 
  
 
