@@ -1,13 +1,12 @@
 <app-header>Adoptar</app-header>
 
 <ion-content>
-  <ion-searchbar (ionInput)="filtrarPerros($event)"></ion-searchbar>
+  <ion-searchbar color="grey" (ionInput)="filtrarPerros($event)"></ion-searchbar>
   <ion-button class="filtro" color="black" [routerLink]="['/filtro']"><ion-icon name="filter"></ion-icon>Filtro</ion-button>
   <ion-grid>
     <ion-row>
       <ion-col size="6" *ngFor="let perro of perros" >
-        <ion-item [routerLink]="['/perrito', perro.id]" 
-  [queryParams]="{ albergueId: albergueId, albergueNombre: albergueNombre }">
+        <ion-item [routerLink]="['/perrito', perro.id]">
           <app-card-perros  [perro]="perro">
           </app-card-perros>
         </ion-item>

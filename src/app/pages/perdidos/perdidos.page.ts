@@ -41,6 +41,254 @@ export class PerdidosPage implements OnInit {
       );
     }
   }
+
+
+//   let perdidos = [
+//   {
+//     id: 1,
+//     nombre: "Tango",
+//     fechaDesaparicion: "2025-04-12",
+//     descripcion: "Labrador de gran tamaño con pelaje dorado brillante.",
+//     color: "Dorado",
+//     tamano: "Grande",
+//     zonaPerdida: "Miraflores",
+//     contactoDueno: "76543210",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 2,
+//     nombre: "Luna",
+//     fechaDesaparicion: "2025-03-28",
+//     descripcion: "Golden Retriever con pelaje crema y mirada tranquila.",
+//     color: "Crema",
+//     tamano: "Grande",
+//     zonaPerdida: "Sopocachi",
+//     contactoDueno: "70123456",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 3,
+//     nombre: "Chester",
+//     fechaDesaparicion: "2025-05-01",
+//     descripcion: "Beagle tricolor con orejas caídas y expresión tímida.",
+//     color: "Tricolor",
+//     tamano: "Mediano",
+//     zonaPerdida: "Obrajes",
+//     contactoDueno: "78945612",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 4,
+//     nombre: "Nina",
+//     fechaDesaparicion: "2025-04-22",
+//     descripcion: "Perrita pequeña de pelaje negro con manchas blancas.",
+//     color: "Negro con manchas blancas",
+//     tamano: "Pequeño",
+//     zonaPerdida: "Alto Obrajes",
+//     contactoDueno: "76392010",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 5,
+//     nombre: "Rocky",
+//     fechaDesaparicion: "2025-04-30",
+//     descripcion: "Rottweiler fuerte y robusto de pelaje oscuro.",
+//     color: "Negro con marrón",
+//     tamano: "Grande",
+//     zonaPerdida: "Villa Fátima",
+//     contactoDueno: "77889900",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 6,
+//     nombre: "Candy",
+//     fechaDesaparicion: "2025-05-05",
+//     descripcion: "Cocker Spaniel mediana, orejas largas y pelo café claro.",
+//     color: "Café claro",
+//     tamano: "Mediano",
+//     zonaPerdida: "San Pedro",
+//     contactoDueno: "70981234",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 7,
+//     nombre: "Toby",
+//     fechaDesaparicion: "2025-04-18",
+//     descripcion: "Pug pequeño, cara arrugada y pelaje beige con negro.",
+//     color: "Beige con negro",
+//     tamano: "Pequeño",
+//     zonaPerdida: "Achumani",
+//     contactoDueno: "76509821",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 8,
+//     nombre: "Lola",
+//     fechaDesaparicion: "2025-03-20",
+//     descripcion: "Shih Tzu pequeña, blanca con gris, pelo largo y suave.",
+//     color: "Blanca con gris",
+//     tamano: "Pequeño",
+//     zonaPerdida: "Calacoto",
+//     contactoDueno: "79813245",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 9,
+//     nombre: "Rex",
+//     fechaDesaparicion: "2025-04-14",
+//     descripcion: "Pastor Alemán de gran tamaño, leal y de pelaje oscuro.",
+//     color: "Negro y marrón",
+//     tamano: "Grande",
+//     zonaPerdida: "Cota Cota",
+//     contactoDueno: "76457890",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 10,
+//     nombre: "Maya",
+//     fechaDesaparicion: "2025-05-02",
+//     descripcion: "Border Collie blanco y negro, activa y ágil.",
+//     color: "Blanco y negro",
+//     tamano: "Mediano",
+//     zonaPerdida: "Irpavi",
+//     contactoDueno: "73216584",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 11,
+//     nombre: "Coco",
+//     fechaDesaparicion: "2025-04-05",
+//     descripcion: "Dálmata con manchas negras distintivas sobre fondo blanco.",
+//     color: "Blanco con manchas negras",
+//     tamano: "Grande",
+//     zonaPerdida: "San Miguel",
+//     contactoDueno: "76091230",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 12,
+//     nombre: "Mimi",
+//     fechaDesaparicion: "2025-03-25",
+//     descripcion: "Pomerania blanca, pequeña y siempre alegre.",
+//     color: "Blanco",
+//     tamano: "Pequeño",
+//     zonaPerdida: "Villa Armonía",
+//     contactoDueno: "77012345",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 13,
+//     nombre: "Simba",
+//     fechaDesaparicion: "2025-05-03",
+//     descripcion: "Pitbull musculoso de pelaje gris.",
+//     color: "Gris",
+//     tamano: "Grande",
+//     zonaPerdida: "Pampahasi",
+//     contactoDueno: "76500111",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 14,
+//     nombre: "Chispa",
+//     fechaDesaparicion: "2025-04-08",
+//     descripcion: "Jack Russell blanca con marrón, muy energética.",
+//     color: "Blanca con marrón",
+//     tamano: "Pequeño",
+//     zonaPerdida: "La Portada",
+//     contactoDueno: "79877655",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 15,
+//     nombre: "Bruno",
+//     fechaDesaparicion: "2025-04-10",
+//     descripcion: "Boxer marrón de gran tamaño, aspecto fuerte.",
+//     color: "Marrón",
+//     tamano: "Grande",
+//     zonaPerdida: "Kupini",
+//     contactoDueno: "73111222",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 16,
+//     nombre: "Pelusa",
+//     fechaDesaparicion: "2025-03-30",
+//     descripcion: "Perra mediana, mestiza, pelaje blanco con beige y esponjoso.",
+//     color: "Blanco con beige",
+//     tamano: "Mediano",
+//     zonaPerdida: "Alto San Pedro",
+//     contactoDueno: "77777777",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 17,
+//     nombre: "Thor",
+//     fechaDesaparicion: "2025-04-26",
+//     descripcion: "Husky siberiano gris con blanco, ojos claros.",
+//     color: "Gris con blanco",
+//     tamano: "Grande",
+//     zonaPerdida: "Següencoma",
+//     contactoDueno: "70101010",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 18,
+//     nombre: "Kira",
+//     fechaDesaparicion: "2025-04-11",
+//     descripcion: "Pastor Belga negro, mediana, muy ágil.",
+//     color: "Negro",
+//     tamano: "Grande",
+//     zonaPerdida: "Kantutani",
+//     contactoDueno: "76443322",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 19,
+//     nombre: "Boby",
+//     fechaDesaparicion: "2025-03-21",
+//     descripcion: "Schnauzer gris de tamaño mediano con barba prominente.",
+//     color: "Gris",
+//     tamano: "Mediano",
+//     zonaPerdida: "Pura Pura",
+//     contactoDueno: "70909090",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 20,
+//     nombre: "Nala",
+//     fechaDesaparicion: "2025-04-01",
+//     descripcion: "Perrita mestiza pequeña de color beige.",
+//     color: "Beige",
+//     tamano: "Pequeño",
+//     zonaPerdida: "Villa El Carmen",
+//     contactoDueno: "70070070",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   },
+//   {
+//     id: 21,
+//     nombre: "Max",
+//     fechaDesaparicion: "2025-05-06",
+//     descripcion: "Perro mediano, pelaje rizado color negro, sin raza definida.",
+//     color: "Negro",
+//     tamano: "Mediano",
+//     zonaPerdida: "Zona Sur",
+//     contactoDueno: "71234567",
+//     imagen: "https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+//   }
+// ];
+//    perdidos.forEach((perdido: any) => {
+//       console.log('cargando perro perdido', perdido);
+//       this.db.addFirestoreDocument('Perdidos', perdido)
+//         .then((res) => {
+//           console.log('Perro perdido agregado', perdido.name);
+//         }).catch((error) => {
+//           console.error('Error al agregar perro:', error);
+//         })
+//     })
+
+//------------------------------------------------------------------------------------------------------------------------------------
+
+
 //  let perdidos = [
 //   {
 //     id: 1,
@@ -365,13 +613,5 @@ export class PerdidosPage implements OnInit {
 // ];
 
 
-//    perdidos.forEach((perdido: any) => {
-//       console.log('cargando perro perdido', perdido);
-//       this.db.addFirestoreDocument('Perdidos', perdido)
-//         .then((res) => {
-//           console.log('Perro perdido agregado', perdido.name);
-//         }).catch((error) => {
-//           console.error('Error al agregar perro:', error);
-//         })
-//     })
+
 }

@@ -17,7 +17,7 @@
 <!-- <ion-button [routherLink="/reportar"]>Reportar</ion-button> -->
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar (ionInput)="filtrarPerdidos($event)"></ion-searchbar>
+  <ion-searchbar color="grey" (ionInput)="filtrarPerdidos($event)"></ion-searchbar>
   <ion-button class="filtro" color="black" [routerLink]="['/filtro']"><ion-icon name="filter"></ion-icon>Filtro</ion-button>
   <ion-button class="boton" color="color-turquesa" [routerLink]="['/reportar']">Reportar</ion-button>
   <ion-grid>

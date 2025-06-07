@@ -8,7 +8,7 @@
 </app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar></ion-searchbar>
+  <ion-searchbar color="grey" (ionInput)="filtrarAlbergues($event)"></ion-searchbar>
   <ion-grid>
     <ion-row>
       <ion-col size="12"  *ngFor="let albergue of albergues">

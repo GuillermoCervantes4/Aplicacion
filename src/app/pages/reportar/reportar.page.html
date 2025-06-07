@@ -8,17 +8,19 @@
 </app-header>
 
 <ion-content>
-  <ion-title class="titulo">Agregar datos</ion-title>
-  <ion-input class="barra" label="Nombre de la mascota" label-placement="floating" fill="outline" placeholder=""></ion-input>
-  <ion-input class="barra" label="Raza o descripcion" label-placement="floating" fill="outline" placeholder=""></ion-input>
-  <ion-input class="barra" label="Fecha y hora de desaparicion" label-placement="floating" fill="outline" placeholder=""></ion-input>
-  <ion-input class="barra" label="Contacto del dueno" label-placement="floating" fill="outline" placeholder=""></ion-input>
-  <ion-input class="barra" label="Recompensa" label-placement="floating" fill="outline" placeholder=""></ion-input>
-  <ion-input class="barra" label="Foto" label-placement="floating" fill="outline" placeholder="Subir foto">
-    <ion-icon color="primary" class="icono" slot="end" name="arrow-up-circle-sharp"></ion-icon>
-  </ion-input>
+  <form  (ngSubmit)="report()">
+    <ion-title class="titulo">Agregar datos</ion-title>
+    <ion-input class="barra" label="Nombre de la mascota" label-placement="floating" fill="outline" placeholder=""></ion-input>
+    <ion-input class="barra" label="Raza o descripcion" label-placement="floating" fill="outline" placeholder=""></ion-input>
+    <ion-input class="barra" label="Fecha y hora de desaparicion" label-placement="floating" fill="outline" placeholder=""></ion-input>
+    <ion-input class="barra" label="Contacto del dueno" label-placement="floating" fill="outline" placeholder=""></ion-input>
+    <ion-input class="barra" label="Recompensa" label-placement="floating" fill="outline" placeholder=""></ion-input>
+    <ion-input class="barra" label="Foto" label-placement="floating" fill="outline" placeholder="Subir foto">
+      <ion-icon color="primary" class="icono" slot="end" name="arrow-up-circle-sharp"></ion-icon>
+    </ion-input>
 
-  <button slot="end" [routerLink]="['/reportar2']">Siguiente</button>
+    <button class="boton" [routerLink]="['/reportar2']">Siguiente</button>
+  </form>
 </ion-content>
 
 <app-toolbar></app-toolbar>

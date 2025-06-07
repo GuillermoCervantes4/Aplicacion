@@ -9,7 +9,8 @@ import { DatabaseService } from 'src/app/services/database.service';
 })
 export class AlberguessPage implements OnInit {
 
-  albergues: any;
+  albergues: any[]=[];
+  alberguesOriginal: any[]=[];
   constructor(
     public db: DatabaseService
   ) {
@@ -25,8 +26,21 @@ export class AlberguessPage implements OnInit {
     this.db.fetchFirestoreCollection('Albergues')
     .subscribe((res: any) => {
       console.log('Albergues Collection: ', res);
+      this.alberguesOriginal = res;
       this.albergues = res;
     })
+  }
+
+  filtrarAlbergues(event: any) {
+    const texto = event.target.value?.toLowerCase().trim() || '';
+
+    if (texto === '') {
+      this.albergues = [...this.alberguesOriginal]; // Mostrar todos si el input está vacío
+    } else {
+      this.albergues = this.alberguesOriginal.filter(albergue =>
+        albergue.nombre?.toLowerCase().includes(texto)
+      );
+    }
   }
 // let shelters = [
 //   {

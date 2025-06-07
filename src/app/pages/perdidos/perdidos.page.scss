@@ -14,3 +14,10 @@
     color: black;
     background: #90fed4;
 }
+
+ion-item {
+  --border-color: transparent !important;
+  --inner-border-width: 0 !important;
+  --padding-start: 0;
+  --padding-end: 0;
+}
