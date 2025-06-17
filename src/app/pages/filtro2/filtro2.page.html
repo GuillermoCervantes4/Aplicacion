@@ -1,4 +1,49 @@
-<ion-header [translucent]="true">
+<ion-content>
+  <ion-list>
+    <ion-title>Casas</ion-title>
+    <ion-item>
+      <ion-label>Grande</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="filtros.casas.grande"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mediano</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="filtros.casas.mediano"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pequeno</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="filtros.casas.pequeno"></ion-checkbox>
+    </ion-item>
+
+    <ion-title>Camas</ion-title>
+    <ion-item>
+      <ion-label>Grande</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="filtros.camas.grande"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mediano</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="filtros.camas.mediano"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pequeno</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="filtros.camas.pequeno"></ion-checkbox>
+    </ion-item>
+
+    <ion-title>Otros</ion-title>
+    <ion-item>
+      <ion-label>Comida</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="filtros.otros.comida"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Juguetes</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="filtros.otros.juguetes"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="aplicarFiltros()">Aplicar</ion-button>
+</ion-content>
+
+
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>filtro</ion-title>
   </ion-toolbar>
@@ -22,15 +67,15 @@
 
     <ion-title>Camas</ion-title>
     <ion-item>
-      <ion-label>Cachorro</ion-label>
+      <ion-label>Grande</ion-label>
       <ion-checkbox slot="end"></ion-checkbox>
     </ion-item>
     <ion-item>
-      <ion-label>Joven</ion-label>
+      <ion-label>Mediano</ion-label>
       <ion-checkbox slot="end"></ion-checkbox>
     </ion-item>
     <ion-item>
-      <ion-label>Adulto</ion-label>
+      <ion-label>Pequeno</ion-label>
       <ion-checkbox slot="end"></ion-checkbox>
     </ion-item>
 
@@ -45,4 +90,4 @@
     </ion-item>
   </ion-list>
   <ion-button expand="full">
-    Aplicar
+    Aplicar -->

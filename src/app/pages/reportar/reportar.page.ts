@@ -32,12 +32,12 @@ export class ReportarPage implements OnInit {
   ngOnInit() {
 
   }
-  report(){
-    if (this.reportForm.valid) {
-      this.auth.reportLostDog(this.reportForm.value)
-        .then(() => console.log('Reporte enviado correctamente'));
-    } else {
-      this.reportForm.markAllAsTouched();
-    }
-  }
+  // report(){
+  //   if (this.reportForm.valid) {
+  //     this.auth.reportLostDog(this.reportForm.value)
+  //       .then(() => console.log('Reporte enviado correctamente'));
+  //   } else {
+  //     this.reportForm.markAllAsTouched();
+  //   }
+  // }
 }
