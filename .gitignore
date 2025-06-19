@@ -4,8 +4,6 @@ node_modules/
 node_modules/
 www/
 .env
-android/
-ios/
 .vscode/
 .idea/
 dist/
